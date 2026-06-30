@@ -44,10 +44,7 @@ JTAG / SWD / UART debug console 是開發期最常用的工具，也是量產後
 
 ### 3.1 生命週期狀態機
 
-```
- <p align="center"><img src="../../img/09-jtag-lifecycle.svg" width="880" alt="JTAG / SWD 除錯介面生命週期"></p>  │token      │    └──────────┘    └──────────────┘
-             └──────────┘
-```
+``````
 
 ### 3.2 各階段的管控
 

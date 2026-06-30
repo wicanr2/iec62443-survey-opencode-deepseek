@@ -71,19 +71,18 @@ P1 回答的問題：
 
 P2 的產出直接決定了產品在 4-2 中的 SL-C 宣告。一個典型的安全需求規格文件結構：
 
-```
-產品安全需求規格 (AMR 車載控制器 v2.1)
-├── 威脅模型摘要 (STRIDE, 見 Practice 3)
-├── 各 FR 安全需求
-│   ├── FR1 (IAC)：支援 TLS mutual auth + x509 裝置憑證。目標 SL-C 3
-│   ├── FR2 (UC) ：RBAC (operator / engineer / auditor)。目標 SL-C 2
-│   ├── FR3 (SI) ：Secure Boot + FW 簽章驗證。目標 SL-C 3
-│   ├── FR4 (DC) ：全鏈路 TLS 1.3。目標 SL-C 2
-│   ├── FR5 (RDF)：支援 VLAN + service ACL。目標 SL-C 2
-│   ├── FR6 (TRE)：Syslog 輸出 + 安全事件記錄保留 ≥30 天。目標 SL-C 2
-│   └── FR7 (RA) ：fail-safe（斷線自動減速停車）。目標 SL-C 2
-└── 補償對策：本組件不支援 L7 DPI（FR5 由 Conduit 補償）
-```
+**安全需求規格文件結構範例**（AMR 車載控制器 v2.1）：
+
+1. **威脅模型摘要** (STRIDE, 見 Practice 3)
+2. **各 FR 安全需求**：
+   - FR1 (IAC)：TLS mutual auth + x509 裝置憑證。目標 SL-C 3
+   - FR2 (UC) ：RBAC (operator / engineer / auditor)。目標 SL-C 2
+   - FR3 (SI) ：Secure Boot + FW 簽章驗證。目標 SL-C 3
+   - FR4 (DC) ：全鏈路 TLS 1.3。目標 SL-C 2
+   - FR5 (RDF)：VLAN + service ACL。目標 SL-C 2
+   - FR6 (TRE)：Syslog 輸出 + 安全事件記錄保留 ≥30 天。目標 SL-C 2
+   - FR7 (RA) ：fail-safe（斷線自動減速停車）。目標 SL-C 2
+3. **補償對策**：本組件不支援 L7 DPI（FR5 由 Conduit 補償）
 
 ## 3. 小結
 

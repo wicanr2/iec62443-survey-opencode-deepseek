@@ -30,51 +30,29 @@
 
 ## 3. 選用決策樹
 
-```<p align="center"><img src="../../img/10-hsm-decision-tree.svg" width="720" alt="HSM / TPM / SE 選用決策樹"></p>```
-
-## 4. Secure Element 實務整合
-
-### 4.1 主流 SE 型號
-
-| 型號 | 介面 | 特徵 | 典型 MCU 搭配 |
-|---|---|---|---|
-| **Microchip ATECC608** | I2C / SWI | ECDSA P-256、AES-128、TRNG、FIPS 140-2 L2 | STM32、ESP32、NXP Kinetis |
-| **NXP SE050** | I2C | ECDSA (多曲線)、RSA 2048-4096、AES-256 | i.MX RT、LPC |
-| **Infineon OPTIGA Trust M** | I2C | ECDSA P-256/384、SHA-256/384、TRNG | 通用 MCU |
-| **ST STSAFE-A110** | I2C | ECDSA P-256、secure channel (TLS handshake inside SE) | STM32 原生 |
-
-### 4.2 典型接線
-
-```<p align="center"><img src="../../img/11-mcu-se-wiring.svg" width="560" alt="MCU ↔ SE 典型五線連接"></p>             └──────────────┘
-```
 
 ### 4.3 SE 內部的 key slot 管理
 
-```
-SE 內部:
-├── Slot 0: Device primary private key (EC P-256)
-│           用於 TLS client cert / device authentication
-│           屬性: 不可匯出、不可讀取
-│
-├── Slot 1: Backup key (optional) ─ 用於 key rotation
-│
-├── Slot 2-5: 供應用層使用 (AES keys, HMAC keys, etc.)
-│
-└── OTP area: 寫入出廠資訊 (serial number, manufacturing date)
-```
+SE 內部 key slot 配置：
+
+| Slot | 用途 | 屬性 |
+|---|---|---|
+| **Slot 0** | Device primary private key (EC P-256) — TLS client cert / device authentication | 不可匯出、不可讀取 |
+| **Slot 1** | Backup key (optional) — 用於 key rotation | — |
+| **Slot 2-5** | 供應用層使用 (AES keys, HMAC keys, etc.) | — |
+| **OTP area** | 寫入出廠資訊 (serial number, manufacturing date) | 一次性寫入 |
 
 > SE 的金鑰產生在 SE 內部完成——私鑰從未離開晶片。開發者只拿到 public key。
 
 ### 4.4 用 SE 做 TLS Client Authentication
 
-```
+
 應用程式（Host MCU）:
   1. 發起 TLS handshake → 需要 client certificate
   2. 向 SE 發送 "sign(challenge)" 請求
   3. SE 內部: 用 Slot 0 private key 簽署 challenge
   4. SE 回傳: signature（私鑰從未離開 SE）
   5. 應用程式: 將 signature 填入 TLS client certificate verify message
-```
 
 ## 5. TPM 的特殊功能
 
@@ -84,22 +62,20 @@ SE 內部:
 
 TPM 在開機過程中，每個階段會把下一階段的 binary hash 「延伸」進 PCR。例如：
 
-```
+
 PCR[0]: Boot ROM hash
 PCR[1]: Bootloader hash
 PCR[2]: OS kernel hash
 ...
-```
 
 **用途**：證明「這台機器是用原廠的 firmware 開機的」。遠端可以要求 TPM 簽署 PCR 值（remote attestation）——若 PCR 值與預期不符，代表 firmware 被改過。
 
 ### 5.2 密封儲存 (Sealing)
 
-```
+
 TPM 可以用 PCR 值當作解封條件：
 - "只有當 PCR[0-3] 等於這些預期值時，才能解開這個 blob"
 - 如果 firmware 被改過（PCR 值變了），金鑰 blob 就解不開
-```
 
 ## 6. 成本 vs 安全矩陣
 

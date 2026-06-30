@@ -25,6 +25,11 @@
 
 ## 2. SL-C 1-4 的要求差異
 
+> 本 FR 對應 IEC 62443-4-2 中的 **14 條 CR**（CR 1.1 – CR 1.14）。每條 CR 對特定 SL-C 等級有要求，下表為各等級的綜合摘要。CR 條號與詳細要求請參閱標準原文或 ISASecure CSA-311。
+>
+> [¹]: CR 條號來自 [isecwire/iec62443-audit](https://github.com/isecwire/iec62443-audit) 與 [VMware IEC 62443-4-2 Companion](https://github.com/vmware/vcf-security-and-compliance-guidelines) 交叉驗證
+
+
 ### 2.1 使用者鑑別
 
 | SL | 要求 |

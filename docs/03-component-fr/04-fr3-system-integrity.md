@@ -19,6 +19,11 @@
 
 ## 2. SL-C 1-4 的要求差異
 
+> 本 FR 對應 IEC 62443-4-2 中的 **14 條 CR**（CR 3.1 – CR 3.14）。每條 CR 對特定 SL-C 等級有要求，下表為各等級的綜合摘要。CR 條號與詳細要求請參閱標準原文或 ISASecure CSA-311。
+>
+> [¹]: 同上。CR 3.12 Secure Provisioning、CR 3.13 Boot Process Integrity、CR 3.14 Data-at-Rest Integrity 在部分來源中為補充項目
+
+
 | SL | 開機完整性 | 韌體/軟體完整性 | 輸入驗證 | 惡意程式防護 |
 |---|---|---|---|---|
 | **SL-C 1** | — | CRC / checksum（只防意外） | 基本驗證 | — |

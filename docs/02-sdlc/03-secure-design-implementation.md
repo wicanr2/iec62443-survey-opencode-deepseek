@@ -70,7 +70,7 @@ STRIDE 是微軟提出的六面向威脅模型，在工控場景的改編：
 |---|---|---|
 | **C/C++ 記憶體安全** | 嵌入式 firmware 大量使用 C/C++，buffer overflow 是最常見的 RCE 入口 | `sprintf(buf, "%s", user_input);` → 改用 `snprintf` + 長度檢查 |
 | **工業協定解析** | 自己 parse Modbus/DNP3/EtherNet/IP 封包時，沒有嚴格驗證長度與範圍 | 攻擊者發送畸形的 Modbus ADU，parser 崩潰 |
-| **硬體資源限制** | 嵌入式裝置 RAM 128KB，不能用完整的 TLS library？→ 安全編碼規範要定義哪些 TLS cipher suite 在受限硬體上可行 |
+| **硬體資源限制** | 嵌入式裝置 RAM 128KB，不能用完整的 TLS library？ | 安全編碼規範要定義哪些 cipher 在受限硬體上可行 |
 | **Debug 殘留** | JTAG/SWD 除錯埠在量產 firmware 中未禁用；debug log 印出密鑰 | 量產 build 關閉所有 debug interface + strip symbol |
 | **Hardcoded Secrets** | API key、JWT secret、database password 寫死在 source code | 用環境變數、secure element、或 CI 注入 |
 
