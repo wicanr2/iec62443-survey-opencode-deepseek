@@ -118,16 +118,7 @@
 
 ## 4. 長期 Roadmap（6-18 個月）
 
-```
-0-6 個月: Quick Wins + P0
-  └── 產出：gap 收斂報告 v1
-
-6-12 個月: P1 (TLS + 憑證 + RBAC + 簽章更新)
-  └── 產出：可送 SDLA 的文件包
-
-12-18 個月: P2 (Secure Boot、SE、流程化)
-  └── 產出：可送 CSA 的完整測試證據
-```
+```<p align="center"><img src="../../img/19-gap-roadmap.svg" width="700" alt="合規補強 Roadmap"></p>```
 
 ## 5. 下一篇
 

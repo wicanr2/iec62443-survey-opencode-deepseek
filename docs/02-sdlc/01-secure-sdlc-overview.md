@@ -42,23 +42,7 @@ IEC 62443-4-1 把安全開發生命週期拆成八個 Practice，按軟體工程
 
 ### Practice 之間的因果關係
 
-```
-P1 (SM) ──→ 全流程的骨架：政策、角色、資源
-                │
-P2 (SPR) ──→ 規格：從 threat 導出安全需求
-                │
-P3 (SD) ──→ 設計：把需求轉成安全架構 (threat model → countermeasures)
-                │
-P4 (SImp) ──→ 實作：照設計寫 code，照規範 review
-                │
-P5 (SVV) ──→ 測試：驗證安全功能有效、找漏洞
-                │
-P6 (DM) ──→ 缺陷：發現漏洞→修→回歸測試 (持續循環)
-                │
-P7 (SUM) ──→ 更新：安全地交付 patch
-                │
-P8 (SG) ──→ 交付：告訴客戶怎麼用才安全
-```
+<p align="center"><img src="../../img/13-sdlc-p1-p8-flow.svg" width="680" alt="IEC 62443-4-1 八大 Practice 流程關係"></p>
 
 **不是線性 waterfall。** P6-P7 是持續迴圈：漏洞可能在產品生命週期的任何時間點發現（交付後十年），但修復流程應該在開發期間就已經建好。
 

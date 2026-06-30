@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" width="720" height="500" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="720" height="500" fill="#fff"/>
+  <text x="360" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">裝置憑證生命週期 (FR1 IAC)</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#555"/></marker></defs>
+
+  <!-- Phase 1: Factory -->
+  <rect x="30" y="55" width="660" height="85" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <rect x="50" y="70" width="100" height="30" rx="15" fill="#2980b9"/>
+  <text x="100" y="90" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">出廠</text>
+  <text x="180" y="85" font-size="11" fill="#555">裝置燒入 unique device key + 廠商簽發的 initial certificate</text>
+
+  <line x1="360" y1="140" x2="360" y2="175" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Phase 2: Deploy -->
+  <rect x="30" y="180" width="660" height="85" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="50" y="195" width="100" height="30" rx="15" fill="#e67e22"/>
+  <text x="100" y="215" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">部署</text>
+  <text x="180" y="210" font-size="11" fill="#555">裝置連上網路 → 向 local CA 請求 operational certificate</text>
+  <text x="180" y="230" font-size="9" fill="#999">CA 驗證 initial certificate + 人工批准 (可選)</text>
+
+  <line x1="360" y1="265" x2="360" y2="295" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Phase 3: Operate -->
+  <rect x="30" y="300" width="660" height="85" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="50" y="315" width="100" height="30" rx="15" fill="#27ae60"/>
+  <text x="100" y="335" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">營運</text>
+  <text x="180" y="330" font-size="11" fill="#555">裝置用 operational certificate 建立 mTLS 連線</text>
+  <text x="180" y="350" font-size="9" fill="#999">定期輪替 (由 CA 管理)</text>
+
+  <line x1="360" y1="385" x2="360" y2="415" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Phase 4: Retire -->
+  <rect x="30" y="420" width="660" height="60" rx="8" fill="#f9ebea" stroke="#c0392b" stroke-width="1.5"/>
+  <rect x="50" y="435" width="100" height="30" rx="15" fill="#c0392b"/>
+  <text x="100" y="455" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">退役</text>
+  <text x="180" y="455" font-size="11" fill="#555">撤銷憑證 + 清除裝置上的私鑰 (zeroize)</text>
+</svg>

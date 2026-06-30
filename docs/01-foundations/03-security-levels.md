@@ -60,13 +60,7 @@ IEC 62443 把安全等級拆成三層，每一層由不同角色負責：
 
 ### 3.2 閉環邏輯
 
-```
-[Asset Owner] ──風險評估──→ SL-T (每個 Zone)
-     │                           │
-     │                   挑選組件 SL-C ≥ SL-T
-     ↓                           │
-[System Integrator] ──整合部署──→ SL-A ≥ SL-T ✓
-```
+```<p align="center"><img src="../../img/03-sl-tca-triangle.svg" width="900" alt="SL-T/C/A 三層閉環"></p>```
 
 一個完整的遵循週期：
 

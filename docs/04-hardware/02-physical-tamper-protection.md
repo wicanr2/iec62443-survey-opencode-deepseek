@@ -45,14 +45,7 @@ JTAG / SWD / UART debug console 是開發期最常用的工具，也是量產後
 ### 3.1 生命週期狀態機
 
 ```
-  開發期          生產期         部署/營運期        退役
-    │              │               │                │
-    ▼              ▼               ▼                ▼
-┌───────┐    ┌──────────┐    ┌──────────┐    ┌──────────────┐
-│JTAG ON│ → │JTAG LOCK │ → │JTAG OFF  │ → │JTAG PERMANENT│
-│Debug  │    │(password) │    │(disabled)│    │DISABLE +     │
-│unlock │    │or unlock  │    │          │    │key zeroize   │
-└───────┘    │token      │    └──────────┘    └──────────────┘
+ <p align="center"><img src="../../img/09-jtag-lifecycle.svg" width="880" alt="JTAG / SWD 除錯介面生命週期"></p>  │token      │    └──────────┘    └──────────────┘
              └──────────┘
 ```
 

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="720" height="380" fill="#fff"/>
+  <text x="360" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">ML 成熟度提升三階段路徑</text>
+
+  <!-- Phase 1 -->
+  <rect x="20" y="50" width="220" height="310" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="130" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">ML 1 → ML 2</text>
+  <text x="130" y="98" text-anchor="middle" font-size="10" fill="#555">約 6 個月</text>
+  <line x1="35" y1="108" x2="225" y2="108" stroke="#2980b9" stroke-width="0.5"/>
+  <text x="35" y="130" font-size="10" fill="#555">P1 指定安全負責人</text>
+  <text x="35" y="150" font-size="10" fill="#555">寫安全開發政策</text>
+  <text x="35" y="175" font-size="10" fill="#555">P2 主力產品 threat model</text>
+  <text x="35" y="200" font-size="10" fill="#555">P4 導入 SAST</text>
+  <text x="35" y="225" font-size="10" fill="#555">編寫安全編碼規範 v1</text>
+  <text x="35" y="250" font-size="10" fill="#555">P6 漏洞通報 email</text>
+  <text x="35" y="270" font-size="10" fill="#555">Jira/GitHub issue 追蹤</text>
+
+  <!-- Phase 2 -->
+  <rect x="250" y="50" width="220" height="310" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="360" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">ML 2 → ML 3</text>
+  <text x="360" y="98" text-anchor="middle" font-size="10" fill="#555">約 6-12 個月</text>
+  <line x1="265" y1="108" x2="455" y2="108" stroke="#e67e22" stroke-width="0.5"/>
+  <text x="265" y="130" font-size="10" fill="#555">P3 安全設計審查標準化</text>
+  <text x="265" y="150" font-size="10" fill="#555">審查 template 化</text>
+  <text x="265" y="175" font-size="10" fill="#555">P5 導入 fuzz testing</text>
+  <text x="265" y="195" font-size="10" fill="#555">pentest 定期排程</text>
+  <text x="265" y="220" font-size="10" fill="#555">P7 簽章更新機制</text>
+  <text x="265" y="240" font-size="10" fill="#555">安全公告模板</text>
+  <text x="265" y="265" font-size="10" fill="#555">P8 hardening guide 模板</text>
+
+  <!-- Phase 3 -->
+  <rect x="480" y="50" width="220" height="310" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="590" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">ML 3 → ML 4</text>
+  <text x="590" y="98" text-anchor="middle" font-size="10" fill="#555">持續改善</text>
+  <line x1="495" y1="108" x2="685" y2="108" stroke="#27ae60" stroke-width="0.5"/>
+  <text x="495" y="130" font-size="10" fill="#555">P1 安全 KPI 導入</text>
+  <text x="495" y="150" font-size="10" fill="#555">defect escape rate</text>
+  <text x="495" y="170" font-size="10" fill="#555">patch adoption rate</text>
+  <text x="495" y="200" font-size="10" fill="#555">P6 post-mortem</text>
+  <text x="495" y="220" font-size="10" fill="#555">root cause 分析</text>
+  <text x="495" y="250" font-size="10" fill="#555">全組織持續改善</text>
+</svg>

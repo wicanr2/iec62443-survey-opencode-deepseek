@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="560" fill="#fff"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">P6 漏洞處理流程 (Defect Management)</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#555"/></marker></defs>
+
+  <!-- Inbox -->
+  <rect x="250" y="50" width="300" height="40" rx="20" fill="#2c3e50"/>
+  <text x="400" y="76" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">漏洞通報 (internal / external / CVE)</text>
+  <line x1="400" y1="90" x2="400" y2="115" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Triage box -->
+  <rect x="180" y="120" width="440" height="100" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">Triage（篩選分類）</text>
+  <text x="400" y="168" text-anchor="middle" font-size="11" fill="#555">確認可重現 (reproduce)、Severity 評級 (CVSS)、指定負責人</text>
+  <line x1="400" y1="175" x2="400" y2="245" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Fix box -->
+  <rect x="180" y="250" width="440" height="100" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">修復開發</text>
+  <text x="400" y="298" text-anchor="middle" font-size="11" fill="#555">寫 patch + unit test → 回歸測試 (確保修 A 沒壞 B) → 安全審查</text>
+  <line x1="400" y1="305" x2="400" y2="375" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Release box -->
+  <rect x="180" y="380" width="440" height="100" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="2"/>
+  <text x="400" y="405" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">發布 (→ P7 SUM)</text>
+  <text x="400" y="428" text-anchor="middle" font-size="11" fill="#555">通知受影響客戶 → 提供簽章 patch → 公開披露 (CVE advisory)</text>
+
+  <!-- Severity sidebar -->
+  <rect x="20" y="120" width="140" height="360" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="90" y="148" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Severity × SLA</text>
+  <rect x="30" y="162" width="120" height="50" rx="4" fill="#f9ebea" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="90" y="182" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0392b">Critical</text>
+  <text x="90" y="198" text-anchor="middle" font-size="9" fill="#555">RCE / 未認證 ≤7d</text>
+  <rect x="30" y="220" width="120" height="50" rx="4" fill="#fdf2e9" stroke="#e67e22" stroke-width="0.8"/>
+  <text x="90" y="240" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">High</text>
+  <text x="90" y="256" text-anchor="middle" font-size="9" fill="#555">DoS / auth bypass ≤14d</text>
+  <rect x="30" y="278" width="120" height="50" rx="4" fill="#fef9e7" stroke="#f1c40f" stroke-width="0.8"/>
+  <text x="90" y="298" text-anchor="middle" font-size="10" font-weight="bold" fill="#f1c40f">Medium</text>
+  <text x="90" y="314" text-anchor="middle" font-size="9" fill="#555">條件觸發 ≤30d</text>
+  <rect x="30" y="336" width="120" height="50" rx="4" fill="#fafafa" stroke="#bdc3c7" stroke-width="0.8"/>
+  <text x="90" y="356" text-anchor="middle" font-size="10" font-weight="bold" fill="#7f8c8d">Low</text>
+  <text x="90" y="372" text-anchor="middle" font-size="9" fill="#999">理論性 → next release</text>
+</svg>

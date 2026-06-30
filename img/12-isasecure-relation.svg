@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="560" height="380" fill="#fff"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">ISASecure 認證方案關係</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/></marker></defs>
+
+  <!-- SDLA (top) -->
+  <rect x="155" y="50" width="250" height="70" rx="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="2"/>
+  <text x="280" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#2980b9">SDLA</text>
+  <text x="280" y="98" text-anchor="middle" font-size="11" fill="#555">Secure Development Lifecycle Assurance</text>
+  <text x="280" y="114" text-anchor="middle" font-size="9" fill="#999">對應 IEC 62443-4-1（只驗流程）</text>
+
+  <!-- Arrows from SDLA -->
+  <line x1="200" y1="120" x2="120" y2="170" stroke="#e67e22" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="360" y1="120" x2="440" y2="170" stroke="#e67e22" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- CSA (left) -->
+  <rect x="30" y="175" width="230" height="95" rx="10" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="145" y="203" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">CSA</text>
+  <text x="145" y="223" text-anchor="middle" font-size="11" fill="#555">Component Security Assurance</text>
+  <text x="145" y="243" text-anchor="middle" font-size="9" fill="#999">IEC 62443-4-2 + 4-1</text>
+  <text x="145" y="260" text-anchor="middle" font-size="9" fill="#999">SA / ED / HD / ND 四類組件</text>
+
+  <!-- SSA (right) -->
+  <rect x="300" y="175" width="230" height="95" rx="10" fill="#e8f8f5" stroke="#27ae60" stroke-width="2"/>
+  <text x="415" y="203" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">SSA</text>
+  <text x="415" y="223" text-anchor="middle" font-size="11" fill="#555">System Security Assurance</text>
+  <text x="415" y="243" text-anchor="middle" font-size="9" fill="#999">IEC 62443-3-3 + 4-1</text>
+  <text x="415" y="260" text-anchor="middle" font-size="9" fill="#999">多組件整合系統</text>
+
+  <!-- Arrow from CSA to ICSA -->
+  <line x1="145" y1="270" x2="145" y2="310" stroke="#e67e22" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- ICSA (bottom) -->
+  <rect x="55" y="315" width="180" height="45" rx="10" fill="#fef9e7" stroke="#f1c40f" stroke-width="1.5"/>
+  <text x="145" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#f1c40f">ICSA</text>
+  <text x="145" y="354" text-anchor="middle" font-size="9" fill="#555">IIoT Component (CSA 擴展)</text>
+
+  <!-- Note -->
+  <rect x="300" y="295" width="230" height="60" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="415" y="318" text-anchor="middle" font-size="10" font-weight="bold" fill="#555">前置條件</text>
+  <text x="415" y="336" text-anchor="middle" font-size="9" fill="#999">SDLA 是 CSA / SSA 的前提 (CCSC 4)</text>
+  <text x="415" y="352" text-anchor="middle" font-size="8" fill="#ccc">可同時送審兩者</text>
+</svg>

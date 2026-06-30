@@ -34,17 +34,7 @@ P6 (DM) 修好的 patch，怎麼送到客戶的設備上？
 
 ### 1.3 安全更新的信任鏈
 
-```
-開發者簽章 (dev key)
-    ↓
-Build server 簽章 (build key, CI 環境)
-    ↓
-發布伺服器簽章 (release key, offline HSM)
-    ↓ patch.tgz + .sig 分開傳輸
-    ↓
-設備下載 → 驗證 release 簽章 → 驗證 build 簽章 → 解開套用
-    ↓
-Bootloader 驗證 firmware 簽章 → 檢查 anti-rollback counter → 開機
+```<p align="center"><img src="../../img/08-update-trust-chain.svg" width="640" alt="P7 安全更新信任鏈"></p>
 ```
 
 > **雙簽章**的分工：build key 確認「這是在我們的 CI 環境 build 的」，release key 確認「這是我們正式發布的」——如果 CI 被入侵，攻擊者簽得出 build 簽章但簽不出 release 簽章。

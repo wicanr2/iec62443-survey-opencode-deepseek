@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="560" height="300" fill="#fff"/>
+  <text x="280" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">MCU ↔ Secure Element 典型五線連接</text>
+
+  <!-- MCU Box -->
+  <rect x="20" y="50" width="180" height="220" rx="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="2"/>
+  <text x="110" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">MCU (Host)</text>
+  <text x="110" y="98" text-anchor="middle" font-size="10" fill="#555">I²C Master</text>
+
+  <!-- SE Box -->
+  <rect x="360" y="50" width="180" height="220" rx="10" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="450" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">Secure Element</text>
+  <text x="450" y="98" text-anchor="middle" font-size="10" fill="#555">I²C Slave</text>
+
+  <!-- I2C SDA -->
+  <line x1="200" y1="130" x2="360" y2="130" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="280" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">I²C SDA (data)</text>
+
+  <!-- I2C SCL -->
+  <line x1="200" y1="165" x2="360" y2="165" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="280" y="157" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">I²C SCL (clock)</text>
+
+  <!-- GPIO -->
+  <line x1="200" y1="200" x2="360" y2="200" stroke="#e67e22" stroke-width="2.5"/>
+  <text x="280" y="192" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">GPIO (!WAKE / !RST)</text>
+
+  <!-- VCC -->
+  <line x1="200" y1="235" x2="360" y2="235" stroke="#c0392b" stroke-width="2"/>
+  <text x="280" y="227" text-anchor="middle" font-size="11" fill="#c0392b">VCC (3.3V)</text>
+
+  <!-- GND -->
+  <line x1="200" y1="258" x2="360" y2="258" stroke="#2c3e50" stroke-width="2"/>
+  <text x="280" y="252" text-anchor="middle" font-size="11" fill="#555">GND</text>
+
+  <!-- Pin labels left -->
+  <text x="210" y="134" font-size="9" fill="#27ae60">SDA</text>
+  <text x="210" y="169" font-size="9" fill="#27ae60">SCL</text>
+  <text x="210" y="204" font-size="9" fill="#e67e22">GPIO</text>
+  <text x="350" y="134" font-size="9" fill="#27ae60">SDA</text>
+  <text x="350" y="169" font-size="9" fill="#27ae60">SCL</text>
+  <text x="350" y="204" font-size="9" fill="#e67e22">!WAKE</text>
+</svg>

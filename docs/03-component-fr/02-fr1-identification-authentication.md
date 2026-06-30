@@ -85,19 +85,7 @@
 
 ### 3.4 裝置憑證部署流程
 
-```
-出廠: 裝置燒入 unique device key + 廠商簽發的 initial certificate
-       │
-部署: 裝置連上網路 → 向 local CA (或雲端 CA) 請求 operational certificate
-       │
-       │  CA 驗證 initial certificate + 人工批准 (可選)
-       ↓
-營運: 裝置用 operational certificate 建立 mTLS 連線
-       │
-       │  定期輪替 (由 CA 管理)
-       ↓
-退役: 撤銷憑證 + 清除裝置上的私鑰
-```
+```<p align="center"><img src="../../img/15-device-cert-lifecycle.svg" width="720" alt="裝置憑證生命週期 (FR1 IAC)"></p>```
 
 ## 4. 硬體支援需求
 

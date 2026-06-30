@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" width="600" height="620" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="600" height="620" fill="#fff"/>
+  <text x="300" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">CSA 認證五步驟</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#555"/></marker></defs>
+
+  <!-- Step 1 -->
+  <rect x="30" y="50" width="540" height="90" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="50" y="75" font-size="13" font-weight="bold" fill="#2980b9">Step 1: 選擇認證機構 (ISO 17065 accredited)</text>
+  <text x="50" y="98" font-size="10" fill="#555">exida (美國) · TÜV Rheinland · TÜV SÜD · CSSC (日本)</text>
+  <line x1="300" y1="140" x2="300" y2="160" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Step 2 -->
+  <rect x="30" y="165" width="540" height="90" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="50" y="190" font-size="13" font-weight="bold" fill="#e67e22">Step 2: 準備文件</text>
+  <text x="50" y="213" font-size="10" fill="#555">SDLA 文件包 · 產品安全需求規格 (P2) · 威脅模型 (P3)</text>
+  <text x="50" y="230" font-size="10" fill="#555">FSA-C 自評表 · 測試報告 (安全功能 + fuzz + pentest)</text>
+  <line x1="300" y1="255" x2="300" y2="275" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Step 3 -->
+  <rect x="30" y="280" width="540" height="100" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="50" y="305" font-size="13" font-weight="bold" fill="#e67e22">Step 3: 實驗室評估 (2-4 週文件審查)</text>
+  <text x="50" y="328" font-size="10" fill="#555">安全功能測試 (照 FSA-C checklist) · 通訊穩定性測試 (fuzz)</text>
+  <text x="50" y="348" font-size="10" fill="#555">弱點掃描 · 報告撰寫</text>
+  <line x1="300" y1="380" x2="300" y2="400" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Step 4 -->
+  <rect x="30" y="405" width="540" height="75" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="50" y="430" font-size="13" font-weight="bold" fill="#27ae60">Step 4: 認證決定</text>
+  <text x="50" y="453" font-size="10" fill="#555">認證機構審查實驗室報告 → 發證 (或要求補件)</text>
+  <line x1="300" y1="480" x2="300" y2="500" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Step 5 -->
+  <rect x="30" y="505" width="540" height="95" rx="8" fill="#f4f6f6" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="50" y="530" font-size="13" font-weight="bold" fill="#7f8c8d">Step 5: 維護 (證書有效期 3 年)</text>
+  <text x="50" y="553" font-size="10" fill="#555">每年 surveillance audit · 產品重大變更 → re-assessment</text>
+</svg>

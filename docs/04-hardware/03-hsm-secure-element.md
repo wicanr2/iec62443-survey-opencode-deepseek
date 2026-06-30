@@ -30,25 +30,7 @@
 
 ## 3. 選用決策樹
 
-```
-你要保護的是什麼？
-    │
-    ├── 平台身分（證明這台設備不是被換過的贗品）
-    │   └── → TPM (或 firmware TPM)
-    │
-    ├── 裝置私鑰（裝置憑證、TLS client cert、FW signing key）
-    │   ├── 資源受限的 MCU (ARM Cortex-M / RISC-V MCU)
-    │   │   └── → Secure Element (ATECC608, SE050, etc.)
-    │   │
-    │   └── 有 Linux 的 embedded system
-    │       ├── 需要 platform attestation
-    │       │   └── → TPM + SE (兩者互補)
-    │       └── 只需金鑰儲存
-    │           └── → TPM (已有 OS driver 支援)
-    │
-    └── 企業級 PKI / 簽章 CA / 大量金鑰管理
-        └── → External HSM (Gemalto/Thales, nCipher, etc.)
-```
+```<p align="center"><img src="../../img/10-hsm-decision-tree.svg" width="720" alt="HSM / TPM / SE 選用決策樹"></p>```
 
 ## 4. Secure Element 實務整合
 
@@ -63,17 +45,7 @@
 
 ### 4.2 典型接線
 
-```
-MCU (Host)                    Secure Element
-┌──────────┐                 ┌──────────────┐
-│          │ I2C SDA ────────│ SDA          │
-│  I2C     │ I2C SCL ────────│ SCL          │
-│  Master  │                 │              │
-│          │ GPIO ───────────│ !WAKE / !RST  │
-│          │                 │              │
-│          │ 3.3V ───────────│ VCC          │
-│          │ GND ────────────│ GND          │
-└──────────┘                 └──────────────┘
+```<p align="center"><img src="../../img/11-mcu-se-wiring.svg" width="560" alt="MCU ↔ SE 典型五線連接"></p>             └──────────────┘
 ```
 
 ### 4.3 SE 內部的 key slot 管理

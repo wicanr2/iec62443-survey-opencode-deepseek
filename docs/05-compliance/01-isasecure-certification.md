@@ -24,17 +24,7 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 
 ### 2.1 方案之間的關係
 
-```
-SDLA ────────────────────────────────
-  │                                    \
-  │  (4-1 開發流程認證)                  \
-  │                                      \
-  ▼                                       ▼
-CSA (4-2 組件安全)                  SSA (3-3 系統安全)
-  │
-  ▼
-ICSA (CSA + IIoT 擴展)
-```
+```<p align="center"><img src="../../img/12-isasecure-relation.svg" width="560" alt="ISASecure 認證方案關係"></p>```
 
 > SDLA 是 CSA 和 SSA 的**前置條件**——產品供應商必須先證明開發流程合規（SDLA），再去認證產品（CSA）。但你可以同時送審兩者。
 
@@ -42,37 +32,7 @@ ICSA (CSA + IIoT 擴展)
 
 ### 3.1 典型 CSA 認證流程
 
-```
-Step 1: 選擇認證機構 (ISO 17065 accredited)
-        ├── exida (美國, 最知名)
-        ├── TÜV Rheinland (德國)
-        ├── TÜV SÜD (德國)
-        └── CSSC (日本, Control System Security Center)
-
-Step 2: 準備文件
-        ├── SDLA 文件包（或現有的 SDLA 證書）
-        ├── 產品安全需求規格（P2 SPR）
-        ├── 威脅模型（P3 SD）
-        ├── FSA-C (Functional Security Assessment) 自評表
-        └── 測試報告（安全功能測試 + fuzz testing + pentest）
-
-Step 3: 實驗室評估 (Lab Evaluation)
-        ├── 文件審查（2-4 週）
-        ├── 技術測試（由實驗室執行或監督）
-        │   ├── 安全功能測試（照 FSA-C checklist）
-        │   ├── 通訊穩定性測試（fuzz testing）
-        │   └── 弱點掃描
-        └── 報告撰寫
-
-Step 4: 認證決定
-        ├── 認證機構審查實驗室報告
-        └── 發證（或要求補件）
-
-Step 5: 維護
-        ├── 證書有效期 3 年
-        ├── 每年 surveillance audit
-        └── 若產品有重大變更 → re-assessment
-```
+```<p align="center"><img src="../../img/17-csa-5step-process.svg" width="600" alt="CSA 認證五步驟"></p>```
 
 ### 3.2 時間與費用概念
 
@@ -89,21 +49,7 @@ Step 5: 維護
 
 ### 4.1 建議路徑
 
-```
-階段 1: SDLA
-  └── 投資開發流程改善（P1-P8）
-  └── 拿到 SDLA 證書
-  └── 耗時: 3-6 個月
-
-階段 2: CSA（旗艦產品）
-  └── 挑一個主力產品送 CSA
-  └── 用 SDLA 證書滿足 4-1 部分（省重複審查）
-  └── 耗時: 2-4 個月
-
-階段 3: CSA（其他產品）或 SSA（系統）
-  └── 產品線擴張認證
-  └── 或走向系統級認證（SSA）
-```
+```<p align="center"><img src="../../img/16-certification-path.svg" width="700" alt="ISASecure 認證三階段路徑"></p>```
 
 ### 4.2 為什麼先做 SDLA？
 

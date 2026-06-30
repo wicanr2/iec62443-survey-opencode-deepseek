@@ -18,28 +18,7 @@
 ## 2. 信任鏈的結構
 
 ```
-  ┌──────────────────────────────┐
-  │   HW Root of Trust           │ ← 一個不可修改的起點
-  │   (Boot ROM / OTP / eFuse)   │
-  └──────────┬───────────────────┘
-             │ 驗證簽章（public key hash 存於 OTP）
-             ▼
-  ┌──────────────────────────────┐
-  │   Bootloader Stage 1         │ ← 第一段可更新的 code
-  │   (最小化，只做簽章驗證+載入) │
-  └──────────┬───────────────────┘
-             │ 驗證簽章
-             ▼
-  ┌──────────────────────────────┐
-  │   Bootloader Stage 2 / RTOS  │
-  └──────────┬───────────────────┘
-             │ 驗證簽章
-             ▼
-  ┌──────────────────────────────┐
-  │   Application Firmware       │
-  └──────────────────────────────┘
-```
-
+ <p align="center"><img src="../../img/14-secureboot-chain.svg" width="520" alt="硬體信任根信任鏈"></p>
 ### 2.1 信任根選型對照
 
 | 方案 | 不可修改性 | 成本 | 說明 |
@@ -75,14 +54,7 @@ Bootloader (flash):
 
 ### 3.2 金鑰分級
 
-```
-Root Key Pair（離線 HSM，永不上線）
-    │
-    ├── Firmware Signing Key（定期輪替）
-    │   └── 每個 release 簽署 firmware
-    │
-    └── Recovery Key（僅用於災難恢復，離線儲存）
-```
+```<p align="center"><img src="../../img/20-key-hierarchy.svg" width="500" alt="金鑰分層管理"></p>```
 
 ## 4. Secure Boot 實作流程
 

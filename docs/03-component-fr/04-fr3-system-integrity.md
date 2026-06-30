@@ -31,20 +31,7 @@
 ### 3.1 Secure Boot 信任鏈
 
 ```
-  HW Root of Trust (ROM / OTP)
-        │
-        ▼  驗證簽章
-  Bootloader (Stage 1)
-        │
-        ▼  驗證簽章
-  Bootloader (Stage 2) / RTOS kernel
-        │
-        ▼  驗證簽章
-  Application firmware
-        │
-        ▼  驗證簽章（如果有的話）
-  Application config / parameters (optional)
-```
+ <p align="center"><img src="../../img/14-secureboot-chain.svg" width="520" alt="Secure Boot 信任鏈"></p>```
 
 每一層驗證下一層的簽章後才交給控制權。任何一層驗證失敗 → 不開機 / 進 recovery mode。
 

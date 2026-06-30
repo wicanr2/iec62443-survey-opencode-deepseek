@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 250" width="880" height="250" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="880" height="250" fill="#fff"/>
+  <text x="440" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">JTAG / SWD 除錯介面生命週期</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/></marker></defs></defs>
+
+  <!-- Phase label row -->
+  <text x="100" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f8c8d">開發期</text>
+  <text x="290" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f8c8d">生產期</text>
+  <text x="508" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f8c8d">部署 / 營運期</text>
+  <text x="730" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f8c8d">退役</text>
+
+  <!-- Arrows between phases -->
+  <line x1="168" y1="70" x2="212" y2="70" stroke="#e67e22" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="358" y1="70" x2="422" y2="70" stroke="#e67e22" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="578" y1="70" x2="642" y2="70" stroke="#e67e22" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- State 1: Dev -->
+  <rect x="30" y="90" width="130" height="85" rx="10" fill="#e8f8f5" stroke="#27ae60" stroke-width="2"/>
+  <text x="95" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">JTAG ON</text>
+  <text x="95" y="135" text-anchor="middle" font-size="10" fill="#555">Debug 全開</text>
+  <text x="95" y="155" text-anchor="middle" font-size="10" fill="#555">UART 可用</text>
+  <text x="95" y="172" text-anchor="middle" font-size="8" fill="#999">開發板階段</text>
+
+  <!-- State 2: Production -->
+  <rect x="210" y="90" width="160" height="85" rx="10" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="290" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">JTAG LOCK</text>
+  <text x="290" y="135" text-anchor="middle" font-size="10" fill="#555">Password 鎖定</text>
+  <text x="290" y="155" text-anchor="middle" font-size="10" fill="#555">或 challenge-response</text>
+  <text x="290" y="172" text-anchor="middle" font-size="8" fill="#999">產測完成後鎖</text>
+
+  <!-- State 3: Deploy -->
+  <rect x="420" y="90" width="160" height="85" rx="10" fill="#f9ebea" stroke="#c0392b" stroke-width="2"/>
+  <text x="500" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">JTAG OFF</text>
+  <text x="500" y="135" text-anchor="middle" font-size="10" fill="#555">Disabled (fuse 燒斷)</text>
+  <text x="500" y="155" text-anchor="middle" font-size="10" fill="#555">UART debug disable</text>
+  <text x="500" y="172" text-anchor="middle" font-size="8" fill="#999">現場部署階段</text>
+
+  <!-- State 4: Retire -->
+  <rect x="630" y="90" width="220" height="85" rx="10" fill="#2c3e50"/>
+  <text x="740" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">PERMANENT DISABLE</text>
+  <text x="740" y="135" text-anchor="middle" font-size="10" fill="#ccc">所有 debug fuse 燒斷</text>
+  <text x="740" y="155" text-anchor="middle" font-size="10" fill="#ccc">所有金鑰 zeroized</text>
+  <text x="740" y="172" text-anchor="middle" font-size="8" fill="#999">產品壽命結束</text>
+
+  <!-- Key action text -->
+  <text x="280" y="215" text-anchor="middle" font-size="9" fill="#e67e22">燒錄 FW</text>
+  <text x="500" y="215" text-anchor="middle" font-size="9" fill="#e67e22">燒 JTAG disable fuse</text>
+  <text x="740" y="215" text-anchor="middle" font-size="9" fill="#999">燒所有 fuse + erase</text>
+</svg>
