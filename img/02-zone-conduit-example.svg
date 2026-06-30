@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="a1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/></marker>
+    <marker id="a2" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto"><path d="M8,0 L0,3 L8,6 Z" fill="#e67e22"/></marker>
+    <marker id="a3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#27ae60"/></marker>
+    <marker id="a4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2980b9"/></marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="580" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="450" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">IEC 62443 Zone &amp; Conduit 劃分範例（ISA-95 / Purdue Model 視角）</text>
+
+  <!-- 圖例 -->
+  <rect x="620" y="8" width="12" height="12" rx="2" fill="none" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="636" y="19" font-size="10" fill="#7f8c8d">Zone</text>
+  <rect x="690" y="8" width="12" height="12" rx="2" fill="#e67e22"/>
+  <text x="706" y="19" font-size="10" fill="#7f8c8d">Conduit</text>
+
+  <!-- ===== Level 4: Enterprise Zone ===== -->
+  <rect x="40" y="55" width="400" height="60" rx="8" fill="#f4f6f6" stroke="#95a5a6" stroke-width="1.5"/>
+  <text x="55" y="78" font-size="13" font-weight="bold" fill="#7f8c8d">Level 4 — Enterprise Zone（企業網路）</text>
+  <text x="55" y="98" font-size="10" fill="#999">ERP、Email、檔案伺服器、Internet 出口　｜　SL：N/A（非 IACS 範圍）</text>
+
+  <!-- Conduit: L4 → L3.5 DMZ -->
+  <line x1="260" y1="115" x2="260" y2="145" stroke="#e67e22" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="270" y="133" font-size="9" fill="#e67e22">Firewall</text>
+
+  <!-- ===== Level 3.5: DMZ ===== -->
+  <rect x="40" y="150" width="400" height="55" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="55" y="173" font-size="12" font-weight="bold" fill="#e67e22">Level 3.5 — DMZ（緩衝區）</text>
+  <text x="55" y="192" font-size="10" fill="#999">補丁伺服器、防毒更新主機、遠端維護 gateway　｜　SL-T 2</text>
+
+  <!-- Conduit: DMZ → L3 -->
+  <line x1="260" y1="205" x2="260" y2="235" stroke="#27ae60" stroke-width="2.5" marker-end="url(#a3)"/>
+  <text x="268" y="223" font-size="9" fill="#27ae60">Firewall + DPI</text>
+
+  <!-- ===== Level 3: Site Operations Zone ===== -->
+  <rect x="40" y="240" width="400" height="60" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="55" y="263" font-size="13" font-weight="bold" fill="#2980b9">Level 3 — Site Operations Zone（廠區營運）</text>
+  <text x="55" y="283" font-size="10" fill="#555">MES (工單管理)、WMS (倉儲管理)、Batch Mgmt　｜　SL-T 2</text>
+
+  <!-- Conduit: L3 → L2 -->
+  <line x1="260" y1="300" x2="260" y2="335" stroke="#e67e22" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="270" y="320" font-size="9" fill="#e67e22">工業 DPI (Modbus/DNP3 filter)</text>
+
+  <!-- ===== Level 2: Area Supervisory Zone ===== -->
+  <rect x="40" y="340" width="400" height="60" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="55" y="363" font-size="13" font-weight="bold" fill="#27ae60">Level 2 — Area Supervisory Zone（區域監控）</text>
+  <text x="55" y="383" font-size="10" fill="#555">SCADA / HMI、Historian（歷史資料庫）　｜　SL-T 2–3</text>
+
+  <!-- Conduit: L2 → L1 -->
+  <line x1="260" y1="400" x2="260" y2="435" stroke="#e67e22" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="270" y="420" font-size="9" fill="#e67e22">工業 DPI + 方向限制</text>
+
+  <!-- ===== Level 1: Basic Control Zone ===== -->
+  <rect x="40" y="440" width="400" height="65" rx="8" fill="#f9ebea" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="55" y="463" font-size="13" font-weight="bold" fill="#c0392b">Level 1 — Basic Control Zone（基本控制）</text>
+  <text x="55" y="483" font-size="10" fill="#555">PLC、RTU、AMR 車隊控制器、安全 PLC (SIS)　｜　SL-T 3（SIS: 4）</text>
+
+  <!-- 子 Zone SIS -->
+  <rect x="280" y="450" width="145" height="40" rx="5" fill="#fff" stroke="#c0392b" stroke-dasharray="4,3" stroke-width="1.2"/>
+  <text x="352" y="467" text-anchor="middle" font-size="9" font-weight="bold" fill="#c0392b">子 Zone: SIS (SL4)</text>
+  <text x="352" y="481" text-anchor="middle" font-size="8" fill="#999">安全儀表系統</text>
+
+  <!-- Conduit: L1 → L0 -->
+  <line x1="180" y1="505" x2="180" y2="525" stroke="#999" stroke-width="1.5"/>
+  <text x="190" y="518" font-size="9" fill="#999">IO / 感測器</text>
+
+  <!-- ===== Level 0 ===== -->
+  <rect x="40" y="530" width="400" height="35" rx="6" fill="#f4f6f6" stroke="#bdc3c7" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="55" y="552" font-size="11" font-weight="bold" fill="#95a5a6">Level 0 — Physical Process（實體製程）</text>
+  <text x="260" y="552" font-size="10" fill="#ccc">感測器、致動器、閥門、馬達 — 不需網路安全要求</text>
+
+  <!-- ===== 右側說明 ===== -->
+  <rect x="490" y="55" width="380" height="160" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="510" y="78" font-size="13" font-weight="bold" fill="#2c3e50">Conduit 安全控制組合（由兩端 Zone 決定）</text>
+
+  <text x="510" y="102" font-size="10" fill="#555">L4 ↔ DMZ：</text>
+  <text x="620" y="102" font-size="10" fill="#555">Firewall + ACL + 加密 (TLS)</text>
+
+  <text x="510" y="120" font-size="10" fill="#555">DMZ ↔ L3：</text>
+  <text x="620" y="120" font-size="10" fill="#555">Firewall + 工業 DPI + 流量監控</text>
+
+  <text x="510" y="138" font-size="10" fill="#555">L3 ↔ L2：</text>
+  <text x="620" y="138" font-size="10" fill="#555">工業 DPI (Modbus/DNP3 filter)</text>
+
+  <text x="510" y="156" font-size="10" fill="#555">L2 ↔ L1：</text>
+  <text x="620" y="156" font-size="10" fill="#555">工業 DPI + 方向限制</text>
+
+  <text x="510" y="180" font-size="10" fill="#555">Data Diode (單向)：</text>
+  <text x="620" y="180" font-size="10" fill="#555">L2→Historian (只出不進)</text>
+
+  <rect x="490" y="235" width="380" height="105" rx="8" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="510" y="258" font-size="13" font-weight="bold" fill="#2c3e50">軟硬體開發者的產品文件必須標明</text>
+
+  <text x="510" y="282" font-size="10" fill="#555">• 本組件需要跟什麼 Zone 通訊（如「需連 Level 2 SCADA」）</text>
+  <text x="510" y="299" font-size="10" fill="#555">• 通訊協定與 port（如「Modbus TCP port 502」）</text>
+  <text x="510" y="316" font-size="10" fill="#555">• 支援的安全通訊能力（如「支援 TLS 1.3」或「不支援加密」）</text>
+  <text x="510" y="333" font-size="10" fill="#555">• 通訊方向（如「僅 outgoing，不回傳」→ 可用 Data diode）</text>
+
+  <rect x="490" y="360" width="380" height="95" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1"/>
+  <text x="510" y="383" font-size="13" font-weight="bold" fill="#e67e22">Defense-in-Depth 的遞迴：Zone 內可再切子 Zone</text>
+
+  <text x="510" y="405" font-size="10" fill="#555">Level 1 Basic Control 內部示範：</text>
+  <text x="510" y="422" font-size="10" fill="#555">• 子 Zone 1A：SIS 安全儀表系統 (SL 4)</text>
+  <text x="510" y="439" font-size="10" fill="#555">• 子 Zone 1B：製程控制 PLC (SL 3) ← SIS Conduit →</text>
+  <text x="510" y="451" font-size="9" fill="#999">即使 Level 1 被攻破，SIS 仍因獨立 Conduit 保護不受影響</text>
+
+  <rect x="490" y="475" width="380" height="85" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1"/>
+  <text x="510" y="498" font-size="13" font-weight="bold" fill="#27ae60">關鍵洞見</text>
+  <text x="510" y="520" font-size="10" fill="#555">• 組件的 SL-C 決定它「能進 SL-T 多少的 Zone」</text>
+  <text x="510" y="538" font-size="10" fill="#555">• SL-C 1 的組件不能放進 SL-T 3 的 Zone——除非</text>
+  <text x="518" y="555" font-size="10" fill="#555">系統層補償（如 Conduit 上加 TLS Proxy）</text>
+</svg>

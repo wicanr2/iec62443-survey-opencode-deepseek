@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/></marker>
+  </defs>
+  <rect width="900" height="560" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="450" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">SL-T / SL-C / SL-A 三層閉環</text>
+
+  <!-- ===== 上半部：三層關係圖 ===== -->
+  <!-- SL-T box (左上) -->
+  <rect x="50" y="55" width="240" height="120" rx="10" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="170" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#e67e22">SL-T（目標安全等級）</text>
+  <text x="170" y="105" text-anchor="middle" font-size="11" fill="#555">誰設定：Asset Owner（業主）</text>
+  <text x="170" y="123" text-anchor="middle" font-size="11" fill="#555">何時：設計規劃階段</text>
+  <text x="170" y="141" text-anchor="middle" font-size="11" fill="#555">依據：IEC 62443-3-2 風險評估</text>
+  <text x="170" y="162" text-anchor="middle" font-size="11" fill="#555">粒度：每 Zone / Conduit 各一 SL-T</text>
+
+  <!-- SL-C box (右上) -->
+  <rect x="610" y="55" width="240" height="120" rx="10" fill="#e8f8f5" stroke="#27ae60" stroke-width="2"/>
+  <text x="730" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#27ae60">SL-C（能力安全等級）</text>
+  <text x="730" y="105" text-anchor="middle" font-size="11" fill="#555">誰設定：Product Supplier（供應商）</text>
+  <text x="730" y="123" text-anchor="middle" font-size="11" fill="#555">何時：產品開發/出廠時</text>
+  <text x="730" y="141" text-anchor="middle" font-size="11" fill="#555">依據：IEC 62443-4-2 測試</text>
+  <text x="730" y="162" text-anchor="middle" font-size="11" fill="#555">粒度：每 FR 各一 SL-C（矩陣）</text>
+
+  <!-- SL-A box (下方中) -->
+  <rect x="330" y="195" width="240" height="95" rx="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="2"/>
+  <text x="450" y="222" text-anchor="middle" font-size="15" font-weight="bold" fill="#2980b9">SL-A（達成安全等級）</text>
+  <text x="450" y="245" text-anchor="middle" font-size="11" fill="#555">誰設定：System Integrator（整合商）</text>
+  <text x="450" y="263" text-anchor="middle" font-size="11" fill="#555">何時：部署後驗收</text>
+  <text x="450" y="281" text-anchor="middle" font-size="11" fill="#555">目標：SL-A ≥ SL-T（每一項 FR）</text>
+
+  <!-- 箭頭 SL-T → 選組件 → SL-C -->
+  <line x1="290" y1="115" x2="605" y2="115" stroke="#e67e22" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="450" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">業主用 SL-T 挑選組件 (SL-C ≥ SL-T)</text>
+
+  <!-- 箭頭 SL-C → SL-A -->
+  <line x1="670" y1="175" x2="530" y2="220" stroke="#27ae60" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="230" y1="175" x2="370" y2="220" stroke="#e67e22" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 箭頭 SL-A → SL-T -->
+  <line x1="450" y1="290" x2="450" y2="320" stroke="#2980b9" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="520" y="310" font-size="11" font-weight="bold" fill="#2980b9">驗證 SL-A ≥ SL-T ✓ ?</text>
+
+  <!-- ===== 下半部：威脅模型 ===== -->
+  <rect x="50" y="335" width="800" height="210" rx="10" fill="#fafafa" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="365" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">SL 1–4：攻擊者模型（能力 × 資源 × 動機）</text>
+
+  <!-- SL table-like layout -->
+  <!-- SL 1 -->
+  <rect x="70" y="385" width="175" height="145" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="157" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">SL 1</text>
+  <text x="157" y="432" text-anchor="middle" font-size="11" fill="#555">防意外 / 誤觸</text>
+  <line x1="80" y1="442" x2="235" y2="442" stroke="#27ae60" stroke-width="0.5"/>
+  <text x="157" y="462" text-anchor="middle" font-size="10" fill="#777">• 操作失誤</text>
+  <text x="157" y="478" text-anchor="middle" font-size="10" fill="#777">• 組態錯誤</text>
+  <text x="157" y="494" text-anchor="middle" font-size="10" fill="#777">• 非蓄意事件</text>
+  <text x="157" y="518" text-anchor="middle" font-size="9" fill="#999">無資源需求</text>
+
+  <!-- SL 2 -->
+  <rect x="260" y="385" width="175" height="145" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="347" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">SL 2</text>
+  <text x="347" y="432" text-anchor="middle" font-size="11" fill="#555">防一般駭客</text>
+  <line x1="270" y1="442" x2="425" y2="442" stroke="#e67e22" stroke-width="0.5"/>
+  <text x="347" y="462" text-anchor="middle" font-size="10" fill="#777">• 公開 exploit</text>
+  <text x="347" y="478" text-anchor="middle" font-size="10" fill="#777">• 網路掃描</text>
+  <text x="347" y="494" text-anchor="middle" font-size="10" fill="#777">• 預設密碼攻擊</text>
+  <text x="347" y="518" text-anchor="middle" font-size="9" fill="#999">低資源 / 一般技能</text>
+
+  <!-- SL 3 -->
+  <rect x="450" y="385" width="175" height="145" rx="8" fill="#f9ebea" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="537" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">SL 3</text>
+  <text x="537" y="432" text-anchor="middle" font-size="11" fill="#555">防針對性攻擊</text>
+  <line x1="460" y1="442" x2="615" y2="442" stroke="#c0392b" stroke-width="0.5"/>
+  <text x="537" y="462" text-anchor="middle" font-size="10" fill="#777">• 工業協定專精</text>
+  <text x="537" y="478" text-anchor="middle" font-size="10" fill="#777">• 客製惡意碼</text>
+  <text x="537" y="494" text-anchor="middle" font-size="10" fill="#777">• 社交工程</text>
+  <text x="537" y="518" text-anchor="middle" font-size="9" fill="#999">中資源 / OT 領域專精</text>
+
+  <!-- SL 4 -->
+  <rect x="640" y="385" width="190" height="145" rx="8" fill="#f4f6f6" stroke="#2c3e50" stroke-width="1.5"/>
+  <text x="735" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">SL 4</text>
+  <text x="735" y="432" text-anchor="middle" font-size="11" fill="#555">防國家級</text>
+  <line x1="650" y1="442" x2="820" y2="442" stroke="#2c3e50" stroke-width="0.5"/>
+  <text x="735" y="462" text-anchor="middle" font-size="10" fill="#777">• APT 持續威脅</text>
+  <text x="735" y="478" text-anchor="middle" font-size="10" fill="#777">• 供應鏈攻擊</text>
+  <text x="735" y="494" text-anchor="middle" font-size="10" fill="#777">• 零時差組合</text>
+  <text x="735" y="518" text-anchor="middle" font-size="9" fill="#999">高資源 / 國家級能力</text>
+
+</svg>

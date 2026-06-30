@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">IEC 62443-4-1 在認證生態中的角色</text>
+
+  <!-- 三個認證方案框 -->
+  <!-- SDLA (左上) -->
+  <rect x="60" y="60" width="230" height="140" rx="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="2"/>
+  <text x="175" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2980b9">SDLA</text>
+  <text x="175" y="108" text-anchor="middle" font-size="11" fill="#555">Secure Development</text>
+  <text x="175" y="125" text-anchor="middle" font-size="11" fill="#555">Lifecycle Assurance</text>
+  <line x1="80" y1="135" x2="270" y2="135" stroke="#2980b9" stroke-width="0.5"/>
+  <text x="175" y="155" text-anchor="middle" font-size="10" fill="#777">只驗開發流程</text>
+  <text x="175" y="172" text-anchor="middle" font-size="10" fill="#777">對應 IEC 62443-4-1</text>
+  <text x="175" y="192" text-anchor="middle" font-size="9" fill="#999">8 Practices × 4 ML</text>
+
+  <!-- CSA (右上) -->
+  <rect x="610" y="60" width="230" height="140" rx="10" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="725" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#e67e22">CSA</text>
+  <text x="725" y="108" text-anchor="middle" font-size="11" fill="#555">Component Security</text>
+  <text x="725" y="125" text-anchor="middle" font-size="11" fill="#555">Assurance</text>
+  <line x1="630" y1="135" x2="820" y2="135" stroke="#e67e22" stroke-width="0.5"/>
+  <text x="725" y="155" text-anchor="middle" font-size="10" fill="#777">驗產品 + 開發流程</text>
+  <text x="725" y="172" text-anchor="middle" font-size="10" fill="#777">4-2 (CR) + 4-1 (SDL)</text>
+  <text x="725" y="192" text-anchor="middle" font-size="9" fill="#999">SA / ED / HD / ND 四類</text>
+
+  <!-- SSA (下方中) -->
+  <rect x="335" y="250" width="230" height="95" rx="10" fill="#e8f8f5" stroke="#27ae60" stroke-width="2"/>
+  <text x="450" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#27ae60">SSA</text>
+  <text x="450" y="298" text-anchor="middle" font-size="11" fill="#555">System Security Assurance</text>
+  <line x1="355" y1="308" x2="545" y2="308" stroke="#27ae60" stroke-width="0.5"/>
+  <text x="450" y="328" text-anchor="middle" font-size="10" fill="#777">驗系統 + 開發流程</text>
+  <text x="450" y="342" text-anchor="middle" font-size="9" fill="#999">3-3 (SR) + 4-1 (SDL)</text>
+
+  <!-- 箭頭 -->
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/></marker>
+  </defs>
+
+  <line x1="290" y1="130" x2="605" y2="130" stroke="#e67e22" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="448" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">4-1 是 CSA 的前置條件 (CCSC 4)</text>
+  <text x="448" y="148" text-anchor="middle" font-size="9" fill="#999">只拿到 SDLA 還不能宣稱產品合規</text>
+
+  <line x1="175" y1="200" x2="400" y2="268" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="725" y1="200" x2="500" y2="268" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <text x="260" y="235" font-size="9" fill="#2980b9">4-1 也是 SSA 前置</text>
+
+  <!-- 右側說明 -->
+  <rect x="60" y="310" width="820" height="55" rx="6" fill="#fff8e1" stroke="#d35400" stroke-width="1"/>
+  <text x="80" y="332" font-size="11" font-weight="bold" fill="#d35400">關鍵洞見</text>
+  <text x="80" y="352" font-size="10" fill="#555">SDLA 是「餃子皮」——只證明你會做餃子，不證明餃子本身安全。</text>
+  <text x="80" y="364" font-size="9" fill="#999">CSA/SSA 才是「認證過的餃子」——需要產品/系統本身通過技術測試（4-2/3-3）+ 開發流程通過 4-1。</text>
+</svg>

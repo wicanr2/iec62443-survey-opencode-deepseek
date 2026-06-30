@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="520" fill="#ffffff"/>
+
+  <!-- 標題 -->
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">IEC 62443 標準族全景地圖</text>
+
+  <!-- 四個區塊 -->
+  <!-- 1-x General (頂部) -->
+  <rect x="40" y="55" width="820" height="75" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="60" y="80" font-size="14" font-weight="bold" fill="#e67e22">62443-1-x General（通用基礎）</text>
+  <text x="60" y="100" font-size="11" fill="#555">-1-1 概念與模型　|　-1-2 術語表　|　-1-3 安全等級 (SL) 定義</text>
+  <text x="60" y="118" font-size="10" fill="#999">角色：寫標準給你用的那本字典。軟體開發者相關度：低</text>
+
+  <!-- 2-x Management (左中) -->
+  <rect x="40" y="145" width="390" height="105" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="60" y="170" font-size="14" font-weight="bold" fill="#2980b9">62443-2-x Management（安全管理）</text>
+  <text x="60" y="192" font-size="11" fill="#555">-2-1 業主安全管理計畫</text>
+  <text x="60" y="210" font-size="11" fill="#555">-2-3 補丁管理</text>
+  <text x="60" y="228" font-size="11" fill="#555">-2-4 服務商安全要求</text>
+  <text x="60" y="245" font-size="10" fill="#999">角色：管組織流程。開發者相關度：低</text>
+
+  <!-- 3-x System (右中) -->
+  <rect x="470" y="145" width="390" height="105" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="490" y="170" font-size="14" font-weight="bold" fill="#27ae60">62443-3-x System（系統安全）</text>
+  <text x="490" y="192" font-size="11" fill="#555">-3-1 安全技術</text>
+  <text x="490" y="210" font-size="11" fill="#555">-3-2 風險評估與 SL-T 設定</text>
+  <text x="490" y="228" font-size="11" fill="#555">★★ -3-3 系統安全需求 (SR)</text>
+  <text x="490" y="245" font-size="10" fill="#999">角色：系統整合商。開發者相關度：中</text>
+
+  <!-- 4-x Component (底部，寬框 highlight) -->
+  <rect x="40" y="270" width="820" height="135" rx="8" fill="#fff8e1" stroke="#d35400" stroke-width="2.5"/>
+  <text x="60" y="298" font-size="16" font-weight="bold" fill="#d35400">★★★ 62443-4-x Component（組件安全）— 軟硬體開發者必讀</text>
+
+  <!-- 4-1 區塊 -->
+  <rect x="60" y="315" width="380" height="78" rx="6" fill="#ffffff" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="80" y="338" font-size="13" font-weight="bold" fill="#e67e22">62443-4-1 安全開發生命週期 (SDLC)</text>
+  <text x="80" y="358" font-size="11" fill="#555">• 安全管理　• 安全需求　• 安全設計</text>
+  <text x="80" y="374" font-size="11" fill="#555">• 安全實作　• 安全測試　• 漏洞處置</text>
+  <text x="80" y="390" font-size="11" fill="#555">• 補丁發布　• 安全文件化</text>
+
+  <!-- 4-2 區塊 -->
+  <rect x="460" y="315" width="380" height="78" rx="6" fill="#ffffff" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="480" y="338" font-size="13" font-weight="bold" fill="#e67e22">62443-4-2 組件技術安全要求</text>
+  <text x="480" y="358" font-size="11" fill="#555">FR1 識別認證  FR2 使用控制  FR3 系統完整性</text>
+  <text x="480" y="374" font-size="11" fill="#555">FR4 資料機密性  FR5 限制資料流</text>
+  <text x="480" y="390" font-size="11" fill="#555">FR6 事件回應  FR7 資源可用性</text>
+
+  <!-- 箭頭 → 指向 4-x -->
+  <line x1="450" y1="250" x2="450" y2="265" stroke="#d35400" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- 角色柱狀說明 (右側) -->
+  <rect x="40" y="430" width="820" height="75" rx="8" fill="#f4f6f6" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="60" y="455" font-size="12" font-weight="bold" fill="#7f8c8d">角色分離：誰該看哪本</text>
+
+  <rect x="60" y="465" width="160" height="28" rx="5" fill="#eaf2f8" stroke="#2980b9" stroke-width="0.8"/>
+  <text x="140" y="484" text-anchor="middle" font-size="10" fill="#2980b9">Asset Owner（業主）→ -2-1, -3-2</text>
+
+  <rect x="235" y="465" width="185" height="28" rx="5" fill="#e8f8f5" stroke="#27ae60" stroke-width="0.8"/>
+  <text x="327" y="484" text-anchor="middle" font-size="10" fill="#27ae60">System Integrator（整合商）→ -2-4, -3-3</text>
+
+  <rect x="435" y="465" width="200" height="28" rx="5" fill="#fff8e1" stroke="#d35400" stroke-width="1.2"/>
+  <text x="535" y="484" text-anchor="middle" font-size="10" fill="#d35400">★ Product Supplier（供應商）→ -4-1, -4-2</text>
+
+  <text x="660" y="484" font-size="10" fill="#999">三層角色 → 三套需求，不重疊</text>
+</svg>
