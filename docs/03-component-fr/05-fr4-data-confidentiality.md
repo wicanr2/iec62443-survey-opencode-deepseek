@@ -116,3 +116,42 @@ Certificate: minimum RSA 2048 / ECDSA P-256
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2 官方頁](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **AES** | Advanced Encryption Standard | 進階加密標準，對稱式加密演算法 |
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **ECDSA** | Elliptic Curve Digital Signature Algorithm | 橢圓曲線數位簽章演算法 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **HMAC** | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
+| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **OS** | Operating System | 作業系統 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **PRNG** | Pseudo-Random Number Generator | 偽隨機數產生器，軟體演算法 |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **RSA** | Rivest-Shamir-Adleman | 非對稱加密/簽章演算法 |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SHA** | Secure Hash Algorithm | 安全雜湊演算法，產生固定長度摘要 |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+| **TRNG** | True Random Number Generator | 真隨機數產生器，硬體熵源 |
+| **mTLS** | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

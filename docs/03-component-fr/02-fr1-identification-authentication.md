@@ -149,3 +149,43 @@
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2 官方頁](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **CA** | Certificate Authority | 憑證授權中心，簽發數位憑證 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **HMI** | Human-Machine Interface | 人機介面 |
+| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| **I2C** | Inter-Integrated Circuit | 晶片間序列通訊匯流排 |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **JWT** | JSON Web Token | JSON 網頁令牌，輕量級認證 token 格式 |
+| **MAC** | Mandatory Access Control | 強制存取控制，如 SELinux |
+| **MCU** | Microcontroller Unit | 微控制器，嵌入式系統的核心晶片 |
+| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| **MFA** | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **OS** | Operating System | 作業系統 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **PUF** | Physically Unclonable Function | 物理不可複製函數，用晶片製造變異產生唯一金鑰 |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SPI** | Serial Peripheral Interface | 序列週邊介面，晶片間高速通訊 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+| **UC** | Use Control | 使用控制 (FR2) |
+| **mTLS** | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

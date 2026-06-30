@@ -84,3 +84,26 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[ISASecure](https://www.isasecure.org/)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **FSA-C** | Functional Security Assessment - Component | ISASecure CSA 的功能安全評估 |
+| **ICSA** | IIoT Component Security Assurance | ISASecure IIoT 組件安全認證 |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **SDLA** | Secure Development Lifecycle Assurance | ISASecure 安全開發流程認證 |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
+| **SPR** | Security Practice: Requirements | 本庫自訂代號：安全需求規格 (P2) |
+| **SSA** | System Security Assurance | ISASecure 系統安全認證 |
+| **STRIDE** | Spoofing/Tampering/Repudiation/InfoDisclosure/DoS/Elevation | 微軟六面向威脅建模方法 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

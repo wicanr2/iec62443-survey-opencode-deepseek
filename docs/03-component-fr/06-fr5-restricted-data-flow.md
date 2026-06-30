@@ -94,3 +94,31 @@ P8 (SG) hardening guide 必須文件化通訊需求：
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2 官方頁](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HMI** | Human-Machine Interface | 人機介面 |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| **NIC** | Network Interface Card | 網路介面卡 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **VLAN** | Virtual LAN | 虛擬區域網路，邏輯隔離 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

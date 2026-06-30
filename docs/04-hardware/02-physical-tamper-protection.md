@@ -109,3 +109,30 @@ JTAG / SWD / UART debug console 是開發期最常用的工具，也是量產後
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| **I2C** | Inter-Integrated Circuit | 晶片間序列通訊匯流排 |
+| **JTAG** | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
+| **MCU** | Microcontroller Unit | 微控制器，嵌入式系統的核心晶片 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SPI** | Serial Peripheral Interface | 序列週邊介面，晶片間高速通訊 |
+| **SWD** | Serial Wire Debug | 序列線除錯，ARM MCU 的除錯介面 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+| **UART** | Universal Asynchronous Receiver-Transmitter | 通用非同步收發器，序列通訊 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

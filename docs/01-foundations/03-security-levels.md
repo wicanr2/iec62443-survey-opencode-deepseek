@@ -144,3 +144,39 @@ SL 定義「強度」，FR 定義「什麼要安全」。兩者的關係是：
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-3-2 (風險評估與 SL 定義) 官方頁](https://webstore.iec.ch/en/publication/30727)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| **AES** | Advanced Encryption Standard | 進階加密標準，對稱式加密演算法 |
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **APT** | Advanced Persistent Threat | 進階持續性威脅，國家級/組織化攻擊 |
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| **MFA** | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-A** | Achieved Security Level | 達成安全等級，部署後經評估確認的實際等級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **UC** | Use Control | 使用控制 (FR2) |
+| **WMS** | Warehouse Management System | 倉儲管理系統 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

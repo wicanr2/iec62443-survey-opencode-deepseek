@@ -141,3 +141,37 @@ SL-T = max(風險矩陣 × 攻擊者分析)
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-3-2 官方頁](https://webstore.iec.ch/en/publication/30727)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **APT** | Advanced Persistent Threat | 進階持續性威脅，國家級/組織化攻擊 |
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CVE** | Common Vulnerabilities and Exposures | 通用漏洞揭露編號 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-A** | Achieved Security Level | 達成安全等級，部署後經評估確認的實際等級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
+| **SUC** | System Under Consideration | 評估目標系統，風險評估的範圍邊界 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **UC** | Use Control | 使用控制 (FR2) |
+| **VLAN** | Virtual LAN | 虛擬區域網路，邏輯隔離 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

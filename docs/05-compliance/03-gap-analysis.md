@@ -129,3 +129,42 @@ IEC 62443 不是唯一的工控資安標準。**跟 ISO 27001、NIST CSF、Commo
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[ISASecure](https://www.isasecure.org/)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **CI** | Continuous Integration | 持續整合，自動化 build/test |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **CSF** | Cybersecurity Framework | 資安框架 (NIST) |
+| **CVE** | Common Vulnerabilities and Exposures | 通用漏洞揭露編號 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **FW** | Firmware | 韌體，嵌入式裝置上的軟體 |
+| **HMAC** | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **JTAG** | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
+| **JWT** | JSON Web Token | JSON 網頁令牌，輕量級認證 token 格式 |
+| **MAC** | Mandatory Access Control | 強制存取控制，如 SELinux |
+| **MFA** | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
+| **NIST** | National Institute of Standards and Technology | 美國國家標準技術研究院 |
+| **NTP** | Network Time Protocol | 網路時間協定，同步設備時鐘 |
+| **PRNG** | Pseudo-Random Number Generator | 偽隨機數產生器，軟體演算法 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **TRNG** | True Random Number Generator | 真隨機數產生器，硬體熵源 |
+| **UC** | Use Control | 使用控制 (FR2) |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

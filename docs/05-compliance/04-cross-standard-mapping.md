@@ -107,3 +107,42 @@ IEC 62443 與 CC 的主要差異：
 > 當需要分析現有工控系統時，以本庫的 FR 1-7 矩陣 + SL 模型為框架，逐條對照現況找出 gap。
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[ISO 27001](https://www.iso.org/standard/82875.html)、[NIST CSF](https://www.nist.gov/cyberframework)、[Common Criteria](https://www.iso.org/standard/72891.html)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **CC** | Common Criteria | 資訊技術安全評估共同準則 (ISO 15408) |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **CSF** | Cybersecurity Framework | 資安框架 (NIST) |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **DCS** | Distributed Control System | 分散式控制系統 |
+| **EAL** | Evaluation Assurance Level | 評估保證等級 (Common Criteria, 1-7) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **IACS** | Industrial Automation and Control System | 工業自動化與控制系統，IEC 62443 的守備範圍 |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **NIST** | National Institute of Standards and Technology | 美國國家標準技術研究院 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **RTU** | Remote Terminal Unit | 遠端終端單元 |
+| **SDLA** | Secure Development Lifecycle Assurance | ISASecure 安全開發流程認證 |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SSA** | System Security Assurance | ISASecure 系統安全認證 |
+| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **UC** | Use Control | 使用控制 (FR2) |
+| **mTLS** | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

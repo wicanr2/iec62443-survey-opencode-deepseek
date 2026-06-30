@@ -100,3 +100,32 @@ CCSC（Common Component Security Constraints）是四條對**所有組件類型*
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[ISASecure CSA 認證](https://www.isasecure.org/en-US/Certification/IEC-62443-CSA-Certification)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **HMI** | Human-Machine Interface | 人機介面 |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **MCU** | Microcontroller Unit | 微控制器，嵌入式系統的核心晶片 |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **OS** | Operating System | 作業系統 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RTOS** | Real-Time Operating System | 即時作業系統 |
+| **RTU** | Remote Terminal Unit | 遠端終端單元 |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

@@ -86,3 +86,34 @@ IEC 62443-4-1 把安全開發生命週期拆成八個 Practice，按軟體工程
 ---
 
 相關：[IEC 62443-4-1 官方頁](https://webstore.iec.ch/en/publication/33615)、[ISASecure SDLA 認證](https://www.isasecure.org/en-US/Certification/IEC-62443-SDLA-Certification)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **CVE** | Common Vulnerabilities and Exposures | 通用漏洞揭露編號 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **ML** | Maturity Level | 成熟度等級，IEC 62443-4-1 對開發流程的分級 (1-4) |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **SDLA** | Secure Development Lifecycle Assurance | ISASecure 安全開發流程認證 |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SImp** | Security Practice: Implementation | 本庫自訂代號：安全實作 (P4) |
+| **SPR** | Security Practice: Requirements | 本庫自訂代號：安全需求規格 (P2) |
+| **SR** | System Requirement | 系統安全需求，IEC 62443-3-3 定義 |
+| **SSA** | System Security Assurance | ISASecure 系統安全認證 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **UC** | Use Control | 使用控制 (FR2) |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

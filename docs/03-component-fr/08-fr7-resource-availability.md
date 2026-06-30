@@ -124,3 +124,31 @@ FR 1-7 逐條解說完成。下一篇進入 **Phase 4：硬體安全專題** →
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2 官方頁](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| **DoS** | Denial of Service | 服務阻斷攻擊，耗盡系統資源使其無法回應 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **NIC** | Network Interface Card | 網路介面卡 |
+| **OS** | Operating System | 作業系統 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

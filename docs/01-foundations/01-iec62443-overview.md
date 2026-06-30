@@ -148,3 +148,25 @@ IEC 62443 分四群。以下用一張地圖說明每群管什麼、誰該讀：
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[PLAN.md](../../PLAN.md)、[IEC 62443-1-1 (概念模型) 官方頁](https://webstore.iec.ch/en/publication/7029)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CVE** | Common Vulnerabilities and Exposures | 通用漏洞揭露編號 |
+| **IACS** | Industrial Automation and Control System | 工業自動化與控制系統，IEC 62443 的守備範圍 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
+| **SR** | System Requirement | 系統安全需求，IEC 62443-3-3 定義 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

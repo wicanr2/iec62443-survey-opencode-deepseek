@@ -109,3 +109,33 @@ TPM 可以用 PCR 值當作解封條件：
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **AES** | Advanced Encryption Standard | 進階加密標準，對稱式加密演算法 |
+| **CA** | Certificate Authority | 憑證授權中心，簽發數位憑證 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **HMAC** | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
+| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| **I2C** | Inter-Integrated Circuit | 晶片間序列通訊匯流排 |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **JTAG** | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
+| **MCU** | Microcontroller Unit | 微控制器，嵌入式系統的核心晶片 |
+| **OS** | Operating System | 作業系統 |
+| **OTP** | One-Time Programmable | 一次性可程式化記憶體 (eFuse 類) |
+| **PCR** | Platform Configuration Register | 平台組態暫存器，TPM 的開機度量記錄 |
+| **PKI** | Public Key Infrastructure | 公開金鑰基礎設施，管理憑證發行/撤銷/輪替 |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SPI** | Serial Peripheral Interface | 序列週邊介面，晶片間高速通訊 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

@@ -114,3 +114,36 @@ Device side (bootloader):
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-4-2 官方頁](https://webstore.iec.ch/en/publication/34421)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
+| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **FW** | Firmware | 韌體，嵌入式裝置上的軟體 |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **HMAC** | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
+| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| **JTAG** | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
+| **MMU** | Memory Management Unit | 記憶體管理單元，虛擬記憶體映射 |
+| **MPU** | Memory Protection Unit | 記憶體保護單元，MCU 層級的記憶體隔離 |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **OS** | Operating System | 作業系統 |
+| **ROP** | Return-Oriented Programming | 返回導向程式設計，繞過 NX/DEP 的利用技術 |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SHA** | Secure Hash Algorithm | 安全雜湊演算法，產生固定長度摘要 |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SWD** | Serial Wire Debug | 序列線除錯，ARM MCU 的除錯介面 |
+| **UART** | Universal Asynchronous Receiver-Transmitter | 通用非同步收發器，序列通訊 |
+| **UC** | Use Control | 使用控制 (FR2) |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

@@ -16,3 +16,18 @@
 | 4 | [04-foundational-requirements.md](04-foundational-requirements.md) | FR 1-7：七個基礎安全需求的由來與全景矩陣 |
 
 → 回 [README](../../README.md)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-A** | Achieved Security Level | 達成安全等級，部署後經評估確認的實際等級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

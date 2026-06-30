@@ -14,3 +14,30 @@
 | 5 | [06-fr5-restricted-data-flow.md](06-fr5-restricted-data-flow.md) | FR5 (RDF)：誰能跟誰通？Default deny + 分區 |
 | 6 | [07-fr6-timely-response.md](07-fr6-timely-response.md) | FR6 (TRE)：出事知道嗎？記錄 + 告警 + 稽核 |
 | 7 | [08-fr7-resource-availability.md](08-fr7-resource-availability.md) | FR7 (RA)：還能運作嗎？抗 DoS + fail-safe |
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **DoS** | Denial of Service | 服務阻斷攻擊，耗盡系統資源使其無法回應 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **UC** | Use Control | 使用控制 (FR2) |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

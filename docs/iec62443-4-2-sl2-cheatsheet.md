@@ -159,3 +159,56 @@
 ---
 
 相關：[CONTEXT.md](../CONTEXT.md)、[FR 1-7 全景](01-foundations/04-foundational-requirements.md)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| **DAC** | Discretionary Access Control | 自由選定存取控制，如 Unix permission |
+| **DC** | Data Confidentiality | 資料機密性 (FR4) |
+| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| **DoS** | Denial of Service | 服務阻斷攻擊，耗盡系統資源使其無法回應 |
+| **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
+| **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
+| **FW** | Firmware | 韌體，嵌入式裝置上的軟體 |
+| **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
+| **HMAC** | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
+| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| **I2C** | Inter-Integrated Circuit | 晶片間序列通訊匯流排 |
+| **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
+| **JTAG** | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
+| **JWT** | JSON Web Token | JSON 網頁令牌，輕量級認證 token 格式 |
+| **MAC** | Mandatory Access Control | 強制存取控制，如 SELinux |
+| **MFA** | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
+| **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
+| **NIC** | Network Interface Card | 網路介面卡 |
+| **NTP** | Network Time Protocol | 網路時間協定，同步設備時鐘 |
+| **OS** | Operating System | 作業系統 |
+| **OTP** | One-Time Programmable | 一次性可程式化記憶體 (eFuse 類) |
+| **PKI** | Public Key Infrastructure | 公開金鑰基礎設施，管理憑證發行/撤銷/輪替 |
+| **PRNG** | Pseudo-Random Number Generator | 偽隨機數產生器，軟體演算法 |
+| **RA** | Resource Availability | 資源可用性 (FR7) |
+| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
+| **RSA** | Rivest-Shamir-Adleman | 非對稱加密/簽章演算法 |
+| **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
+| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| **SI** | System Integrity | 系統完整性 (FR3) |
+| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SOAR** | Security Orchestration Automation and Response | 安全自動化協作與回應 |
+| **SWD** | Serial Wire Debug | 序列線除錯，ARM MCU 的除錯介面 |
+| **SoD** | Separation of Duties | 職責分離，一人不能同時發起+核准關鍵操作 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+| **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
+| **TRNG** | True Random Number Generator | 真隨機數產生器，硬體熵源 |
+| **UC** | Use Control | 使用控制 (FR2) |
+| **VLAN** | Virtual LAN | 虛擬區域網路，邏輯隔離 |
+| **mTLS** | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
+
+> 完整術語表見 [CONTEXT.md](../CONTEXT.md)

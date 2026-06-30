@@ -175,3 +175,30 @@ Zone & Conduit 模型對產品開發者的影響，不是「你要實作 Conduit
 ---
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-3-2 官方頁](https://webstore.iec.ch/en/publication/30727)
+
+
+---
+
+## 本文使用縮寫對照
+
+| 縮寫 | 全稱 | 說明 |
+|---|---|---|
+| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
+| **DCS** | Distributed Control System | 分散式控制系統 |
+| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| **HMI** | Human-Machine Interface | 人機介面 |
+| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| **RTU** | Remote Terminal Unit | 遠端終端單元 |
+| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
+| **SL-A** | Achieved Security Level | 達成安全等級，部署後經評估確認的實際等級 |
+| **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
+| **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
+| **SUC** | System Under Consideration | 評估目標系統，風險評估的範圍邊界 |
+| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| **VLAN** | Virtual LAN | 虛擬區域網路，邏輯隔離 |
+
+> 完整術語表見 [CONTEXT.md](../../CONTEXT.md)
