@@ -54,6 +54,10 @@ iec62443-kb/
         ├── 02-sl-achievement-path.md        SL 達成路徑 — 閉環六步驟
         ├── 03-gap-analysis.md              常見合規落差與補強策略
         └── 04-cross-standard-mapping.md     與 ISO 27001 / NIST CSF / CC 對照
+│
+├── docs/iec62443-4-2-sl2-cheatsheet.md  ← IEC 62443-4-2 SL≥2 速查表：FR 1-7 × SL 2-4 對照 + SL 2 達標最低 10 項檢查表
+│
+└── (SmartMove-*.md)    ← [本地內部文件，不上傳 GitHub] SmartMove vs IEC 62443-4-2 SL≥2 差距分析
 ```
 
 ## 寫作原則
