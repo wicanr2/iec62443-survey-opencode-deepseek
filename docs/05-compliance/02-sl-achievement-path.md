@@ -6,14 +6,7 @@
 
 ## 1. 完整閉環：六步驟
 
-```
-步驟 1 步驟 2 步驟 3 步驟 4 步驟 5 步驟 6
-定義 SUC → 劃分 Zone & → 風險評估定 → 挑選組件 → 部署驗收 → 營運監控
- Conduit SL-T (SL-C≥SL-T) (SL-A≥SL-T)
-────────── ────────── ────────── ────────── ────────── ──────────
-Asset Owner Asset Owner Asset Owner System Integ System Integ Asset Owner
- + Product Sup
-```
+<p align="center"><img src="../../img/21-sl-6step-loop.svg" width="860" alt="SL 達成六步驟閉環"></p>
 
 ### 2. 步驟 1：定義 SUC (System Under Consideration)
 
