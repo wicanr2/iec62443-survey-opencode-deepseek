@@ -127,3 +127,14 @@ JTAG / SWD / UART debug console 是開發期最常用的工具，也是量產後
 | UART | Universal Asynchronous Receiver-Transmitter | 通用非同步收發器，序列通訊 |
 
 > 完整術語表見 [CONTEXT.md](../../CONTEXT.md)
+
+---
+
+## 版本資訊
+
+- **基於標準**：IEC 62443-4-2:2019 (ED1)、IEC 62443-4-1:2018
+- **認證方案**：ISASecure CSA 1.0.0
+- **知識庫版本**：v0.1.0（2026-06-30）
+
+> 詳細演進見 [CHANGELOG.md](../../CHANGELOG.md)
+

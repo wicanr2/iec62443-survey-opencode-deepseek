@@ -98,3 +98,14 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 | STRIDE | Spoofing/Tampering/Repudiation/InfoDisclosure/DoS/Elevation | 微軟六面向威脅建模方法 |
 
 > 完整術語表見 [CONTEXT.md](../../CONTEXT.md)
+
+---
+
+## 版本資訊
+
+- **基於標準**：IEC 62443-4-2:2019 (ED1)、IEC 62443-4-1:2018
+- **認證方案**：ISASecure CSA 1.0.0
+- **知識庫版本**：v0.1.0（2026-06-30）
+
+> 詳細演進見 [CHANGELOG.md](../../CHANGELOG.md)
+

@@ -140,3 +140,14 @@ IEC 62443 與 CC 的主要差異：
 | mTLS | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
 
 > 完整術語表見 [CONTEXT.md](../../CONTEXT.md)
+
+---
+
+## 版本資訊
+
+- **基於標準**：IEC 62443-4-2:2019 (ED1)、IEC 62443-4-1:2018
+- **認證方案**：ISASecure CSA 1.0.0
+- **知識庫版本**：v0.1.0（2026-06-30）
+
+> 詳細演進見 [CHANGELOG.md](../../CHANGELOG.md)
+
