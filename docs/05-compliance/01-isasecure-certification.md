@@ -35,14 +35,30 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 
 ### 3.2 時間與費用概念
 
+> **免責聲明**：下表為方向性估算，基於業界經驗。ISASecure 官方僅公開 CSA 註冊年費（Component $1,200/年、Product Family $1,500/年），其他認證費用需向各認證機構（CB）報價取得。內部人力成本（撰寫文件、流程改造、測試準備）通常遠超認證費本身。
+
 | 項目 | 估算範圍 | 備註 |
 |---|---|---|
-| SDLA 初次認證 | 3-6 個月, USD 30k-80k（僅稽核與發證費，不含內部人力投入） | 組織規模、成熟度影響大 |
+| SDLA 初次認證 | 3-6 個月, USD 30k-80k（僅 CB 報價，不含內部人力投入） | 組織規模、成熟度影響大 |
 | CSA 單一組件 | 2-6 個月, USD 20k-60k | 組件複雜度、FR coverage 影響大 |
 | SSA 系統認證 | 4-9 個月, USD 50k-150k | 系統規模、整合複雜度 |
 | 年度維護費 | ~USD 5k-20k/year | 含 surveillance audit |
 
-> 以上為方向性估算，實際依認證機構報價為準。
+### 3.3 ISASecure 認可之認證機構 (CB)
+
+> ISASecure 認證由通過 ISO/IEC 17065 認證的認證機構執行。具體名單可能變動，建議查 isaseseure.org 官方最新公告。
+
+| 認證機構 | 國家/地區 |
+|---|---|
+| Bureau Veritas | 法國/全球 |
+| exida | 美國 |
+| Intertek | 全球 |
+| SGS-TÜV Saar | 德國 |
+| TÜV Nord | 德國 |
+| TÜV Rheinland | 德國 |
+| TÜV SÜD | 德國 |
+| UL | 美國/全球 |
+| CSSC (Control System Security Center) | 日本 |
 
 ## 4. 從哪開始？
 

@@ -34,6 +34,8 @@
 - 核心 25 篇文章的外部引用集中在 Docker 文件，其他 24 篇以公開標準結構為主，未逐條對照原版標準條文。
 - 25 篇 CR 條號（CR 1.1-7.8）來自 isecwire/iec62443-audit 與 VMware companion 交叉驗證，原版 62443-4-2 為付費標準，未逐條原文核對。
 - 認證費用、實驗室選擇、ISASecure 認證機構列表等需以官方最新公告為準，本知識庫僅提供方向性估算。
+- **已查證**（v0.1.1 新增）：CR 條號、SL 1-4 定義、CCSC 1-4 內容、IEC 62443-4-2:2019 發布日與 192 頁、IEC 62443-4-1:2018 發布日、ISASecure CSA 1.0.0 (2019-08-28) 均經 IEC Webstore 與 isasecure.org 官方確認。
+- 詳見 [docs/REVIEW-reality-check.md](docs/REVIEW-reality-check.md) 完整真實性審查報告。
 
 ### 預計下版
 
