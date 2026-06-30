@@ -90,7 +90,7 @@
 
 ### 3.4 裝置憑證部署流程
 
-```<p align="center"><img src="../../img/15-device-cert-lifecycle.svg" width="720" alt="裝置憑證生命週期 (FR1 IAC)"></p>```
+<p align="center"><img src="../../img/15-device-cert-lifecycle.svg" width="720" alt="裝置憑證生命週期 (FR1 IAC)"></p>
 
 ## 4. 硬體支援需求
 

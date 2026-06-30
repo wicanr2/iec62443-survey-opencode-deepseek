@@ -76,7 +76,7 @@ STRIDE 是微軟提出的六面向威脅模型，在工控場景的改編：
 
 ### 2.4 安全 code review 的實務流程
 
-```<p align="center"><img src="../../img/06-code-review-flow.svg" width="720" alt="安全 Code Review 流程 (P4 SImp)"></p>```
+<p align="center"><img src="../../img/06-code-review-flow.svg" width="720" alt="安全 Code Review 流程 (P4 SImp)"></p>
 
 > 工控產品的特殊性：firmware 的 code review 不能只靠 SAST——許多 MCU 的 HAL 層、bootloader、中斷處理常式不在 SAST 的掃描範圍內。這些需要手動審查。
 

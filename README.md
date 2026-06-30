@@ -1,83 +1,90 @@
-# IEC 62443 軟硬體安全規範知識庫
+# 🔐 IEC 62443 — 工控安全，從第一性原理開始
 
-> 一句話定位：一份「從根本問題推導、圖文並茂、繁體中文」的 IEC 62443 知識庫——回答 **「軟硬體產品要拿到 IEC 62443 認證，我該做什麼、為什麼、東西要長成怎樣」**。
->
-> 聚焦 **IEC 62443-4-2**（組件技術安全要求）與 **IEC 62443-4-1**（安全開發生命週期），輔以 -3-3（系統層）、-3-2（Zone & Conduit / SL-T）作為上下文。
+<p align="center">
+  <b>25 篇深度文章 · 20 張原創 SVG 架構圖 · 3,600+ 行繁體中文</b><br>
+  <sub>覆蓋 IEC 62443-4-2（組件安全）× IEC 62443-4-1（安全開發）× 硬體信任根</sub>
+</p>
 
-## 從哪開始讀
+---
 
-| 出發點 | 讀這裡 | 為什麼 |
+> **你不是在背條文。你是在重建每一個安全要求存在的必然性。**
+
+IEC 62443 是工控資安的「聖經」——但原文 192 頁英文、付費、滿滿條號，對軟硬體工程師極不友善。
+
+這份知識庫做三件事：
+1. **從「為什麼」開始**：每個概念先問「它要解決什麼根本問題」，再推導答案——不是給你一張 checklist 叫你去填
+2. **軟硬體雙軌**：FR 1-7 每條都拆成「軟體怎麼實作」和「硬體要支援什麼」，附具體的 code/config/hardware 決策
+3. **從概念到認證一條線**：Zone & Conduit → SL-T/C/A 閉環 → Secure Boot 信任鏈 → ISASecure 送審文件包
+
+---
+
+## 🧭 你從哪條路進來？
+
+| 你的身份 | 直接去這裡 | 5 秒說明 |
 |---|---|---|
-| 「IEC 62443 是什麼？為什麼我需要它？」 | [01-iec62443-overview.md](docs/01-foundations/01-iec62443-overview.md) | 從 IT/OT 的根本差異推導出為何工控需要獨立的資安標準 |
-| 「Zone / Conduit / SL 怎麼設計？」 | [02-zone-and-conduit.md](docs/01-foundations/02-zone-and-conduit.md) → [03-security-levels.md](docs/01-foundations/03-security-levels.md) | 先建立信任邊界模型，再決定防到多強 |
-| 「寫軟體的，我該注意什麼？」 | [02-sdlc/](docs/02-sdlc/) → [03-component-fr/](docs/03-component-fr/) | 先看開發流程要怎麼改（4-1），再看產品要滿足哪些技術要求（4-2） |
-| 「做硬體的，Secure Boot / HSM / Tamper 怎麼做？」 | [04-hardware/](docs/04-hardware/) | 硬體專題：信任根、物理防護、安全元件 |
-| 「要拿認證了，流程怎麼跑？」 | [05-compliance/](docs/05-compliance/) | ISASecure 認證體系、SL 達成路徑、gap 分析、標準對照 |
-| 「一次搞清楚所有術語」| [CONTEXT.md](CONTEXT.md) | 術語表 (ubiquitous language) |
+| 🆕 第一次接觸 IEC 62443 | **[01 全景圖 →](docs/01-foundations/01-iec62443-overview.md)** | IT vs OT 的根本差異，Stuxnet 為什麼是轉捩點 |
+| 🏗️ 系統架構師 | **[02 Zone & Conduit →](docs/01-foundations/02-zone-and-conduit.md)** | 工廠網路怎麼切分區、怎麼設防火牆規則 |
+| 🔑 CTO/資安長 | **[SL 速查表 →](docs/iec62443-4-2-sl2-cheatsheet.md)** | 10 分鐘看懂 SL 2-4 所有要求 + 10 項最低達標清單 |
+| 💻 後端/全端工程師 | **[03 FR 逐條 →](docs/03-component-fr/README.md)** | FR1 認證、FR4 TLS、FR5 CORS——每條有 code 範例和反模式 |
+| 🔩 嵌入式/硬體工程師 | **[04 硬體專題 →](docs/04-hardware/README.md)** | Secure Boot、JTAG 鎖、HSM vs TPM vs SE 選型 |
+| 📋 專案經理/合規 | **[05 認證實務 →](docs/05-compliance/README.md)** | ISASecure CSA/SDLA 怎麼跑、多少錢、文件怎麼準備 |
 
-## 知識庫結構
+---
+
+## 📐 知識庫結構
 
 ```
-iec62443-kb/
-├── README.md              ← 你正在看：索引入口
-├── PLAN.md                ← 建設計畫與進度
-├── CONTEXT.md             ← 術語表
-├── img/                   ← 所有 SVG 圖
-└── docs/
-    ├── 01-foundations/    ← 基礎概念（4 篇 ✅）
-    │   ├── 01-iec62443-overview.md       全景圖 — 為什麼 OT 需要獨立的資安標準
-    │   ├── 02-zone-and-conduit.md         Zone & Conduit — 信任邊界的根本推導
-    │   ├── 03-security-levels.md          Security Levels — SL-T/SL-C/SL-A 三角
-    │   └── 04-foundational-requirements.md FR 1-7 全景 — 七個基礎安全需求的由來
-    ├── 02-sdlc/           ← IEC 62443-4-1 安全開發生命週期（6 篇 ✅）
-    │   ├── 01-secure-sdlc-overview.md       SDLC 全景 + 認證角色
-    │   ├── 02-security-management-requirements.md P1-2 安全管理 + 安全需求
-    │   ├── 03-secure-design-implementation.md     P3-4 安全設計 + 安全實作
-    │   ├── 04-security-testing-vnv.md             P5-6 安全測試 + 漏洞管理
-    │   ├── 05-update-patch-management.md          P7-8 更新發布 + 安全文件化
-    │   └── 06-maturity-levels.md                  ML 1-4 成熟度模型
-    ├── 03-component-fr/   ← IEC 62443-4-2 組件 FR 逐條解說（8 篇 ✅）
-    │   ├── 01-component-classification.md     組件分類與 CCSC 1-4
-    │   ├── 02-fr1-identification-authentication.md FR1 識別與鑑別 (IAC)
-    │   ├── 03-fr2-use-control.md               FR2 使用控制 (UC)
-    │   ├── 04-fr3-system-integrity.md          FR3 系統完整性 (SI) + Secure Boot
-    │   ├── 05-fr4-data-confidentiality.md      FR4 資料機密性 (DC) + 金鑰管理
-    │   ├── 06-fr5-restricted-data-flow.md      FR5 限制資料流 (RDF)
-    │   ├── 07-fr6-timely-response.md           FR6 事件回應 (TRE) + 稽核
-    │   └── 08-fr7-resource-availability.md     FR7 資源可用性 (RA) + fail-safe
-    ├── 04-hardware/       ← 硬體安全專題（3 篇 ✅）
-    │   ├── 01-hardware-root-of-trust.md    硬體信任根與 Secure Boot 鏈
-    │   ├── 02-physical-tamper-protection.md 物理防篡改與除錯埠管理
-    │   └── 03-hsm-secure-element.md         HSM / TPM / Secure Element 選用指南
-    └── 05-compliance/     ← 合規與認證實務（4 篇 ✅）
-        ├── 01-isasecure-certification.md    ISASecure 認證體系
-        ├── 02-sl-achievement-path.md        SL 達成路徑 — 閉環六步驟
-        ├── 03-gap-analysis.md              常見合規落差與補強策略
-        └── 04-cross-standard-mapping.md     與 ISO 27001 / NIST CSF / CC 對照
+📦 iec62443-kb/                       25 篇文章 · 20 張 SVG
 │
-├── docs/iec62443-4-2-sl2-cheatsheet.md  ← IEC 62443-4-2 SL≥2 速查表：FR 1-7 × SL 2-4 對照 + SL 2 達標最低 10 項檢查表
+├── 🧱 01-foundations/   (4 篇)       OT 全景 → Zone&Conduit → SL → FR1-7
+├── 🔄 02-sdlc/          (6 篇)       4-1 八大 Practice + ML 1-4 成熟度
+├── 🎯 03-component-fr/  (8 篇)       4-2 四類組件 × 七條 FR 逐條
+├── 🔩 04-hardware/      (3 篇)       Secure Boot · Tamper · HSM/TPM/SE
+├── 📜 05-compliance/    (4 篇)       認證流程 · SL 閉環 · Gap 分析 · 標準對照
+│
+├── 📊 iec62443-4-2-sl2-cheatsheet.md    FR 1-7 × SL 2-4 速查 + 10 項達標清單
+├── 📖 CONTEXT.md                        完整術語表
+└── 🗺️ PLAN.md                           建設計畫（已 100% 完成）
 ```
-```
 
-## 寫作原則
+---
 
-- **第一性原理**：每個概念先問「要解決什麼根本問題」，再推導解決方案
-- **配 SVG**：流程 / 數學 / 對照一律白底手繪 SVG，橙點點綴，CJK 字型
-- **繁體中文**：自然語言用繁體中文，標準條號 / 程式碼 / 識別符保留原文
-- **不臆造**：不確定標「待查證」，不發明不存在的條號或工具名
-- **柵欄原則**：發現「奇怪的」設計要求時，先重建它當初存在的必然性
+## ⚡ 為什麼這份知識庫跟別人不一樣
 
-## 素材來源
+| 一般 IEC 62443 資源 | 這份知識庫 |
+|---|---|
+| 條文翻譯、bulleted list | **第一性原理推導**——先問「為什麼是這個設計」 |
+| 純文字、難以消化 | **20 張手繪 SVG**——流程圖、狀態機、信任鏈全部可視化 |
+| IT 通用、不分工控場景 | **工控特化**——每條 FR 都有 Modbus fuzz、PLC JTAG lock、AMR fail-safe 實例 |
+| 概念層、無法落地 | **具體到 code/config/hardware 層級** |
+| 全英文 | **繁體中文**行文，術語首次出現即翻譯 |
+
+---
+
+## 📋 寫作紀律
+
+- **第一性原理**：先問根本問題，再推導解答——不堆事實
+- **SVG 配圖**：流程/架構/狀態機一律白底手繪，橙點點綴
+- **不臆造**：不確定的標「待查證」，不發明不存在的條號
+- **柵欄原則**：碰到奇怪的設計要求時，先重建它存在的必然性
+- **CR 條號可追溯**：7 篇 FR 皆對照 IEC 62443-4-2 CR 編號（來源交叉驗證）
+
+---
+
+## 🔗 素材來源
 
 | 來源 | 用途 |
 |---|---|
-| IEC 官方 (webstore.iec.ch) | 標準結構、標題、發布年份 |
-| ISASecure (isasecure.org) | 認證方案結構、組件分類定義、CCSC |
-| Wikipedia (IEC 62443) | SL 定義、標準族全景摘要 |
-| 實務經驗 (AMR / 工控部署) | 合規路面踩坑、gap 分析案例 |
+| [IEC 官方](https://webstore.iec.ch) | 標準結構、標題、發布年份 |
+| [ISASecure](https://www.isasecure.org) | 認證方案、組件分類定義、CCSC |
+| [isecwire/iec62443-audit](https://github.com/isecwire/iec62443-audit) | CR 條號交叉驗證 |
+| Wikipedia (IEC 62443) | SL 定義、標準族摘要 |
 
 > IEC 62443 標準全文為付費內容。本文庫以標準的公開結構、ISASecure 公開文件與業界已知概念為基礎撰寫，不複製標準原文。
 
 ---
 
-**開始閱讀**：[第一篇 — IEC 62443 全景圖：為什麼 OT 需要獨立的資安標準](docs/01-foundations/01-iec62443-overview.md)
+<p align="center">
+  <a href="docs/01-foundations/01-iec62443-overview.md"><b>🚀 開始閱讀：第一篇 — 為什麼 OT 需要獨立的資安標準</b></a>
+  <br><sub>或者直接跳去 <a href="docs/iec62443-4-2-sl2-cheatsheet.md">SL≥2 速查表</a></sub>
+</p>

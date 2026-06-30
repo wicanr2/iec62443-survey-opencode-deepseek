@@ -87,7 +87,7 @@ Certificate: minimum RSA 2048 / ECDSA P-256
 
 ### 4.1 金鑰分層管理
 
-```<p align="center"><img src="../../img/20-key-hierarchy.svg" width="500" alt="金鑰分層管理 (FR4 DC)"></p>```
+<p align="center"><img src="../../img/20-key-hierarchy.svg" width="500" alt="金鑰分層管理 (FR4 DC)"></p>
 
 > 分層的目的：DEK 如果洩漏（輪替頻率高），不會洩漏 Root Key（從來沒離開 SE）。攻擊者最多拿到一組 DEK 解密局部的資料。
 

@@ -34,8 +34,7 @@ P6 (DM) 修好的 patch，怎麼送到客戶的設備上？
 
 ### 1.3 安全更新的信任鏈
 
-```<p align="center"><img src="../../img/08-update-trust-chain.svg" width="640" alt="P7 安全更新信任鏈"></p>
-```
+<p align="center"><img src="../../img/08-update-trust-chain.svg" width="640" alt="P7 安全更新信任鏈"></p>
 
 > **雙簽章**的分工：build key 確認「這是在我們的 CI 環境 build 的」，release key 確認「這是我們正式發布的」——如果 CI 被入侵，攻擊者簽得出 build 簽章但簽不出 release 簽章。
 

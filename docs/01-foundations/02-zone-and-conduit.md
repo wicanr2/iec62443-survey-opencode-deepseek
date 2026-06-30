@@ -11,8 +11,7 @@
 
 一個典型的半導體廠網路：
 
-```
-  <p align="center"><img src="../../img/02-zone-conduit-example.svg" width="900" alt="Zone &amp; Conduit 實際劃分範例"></p>```
+<p align="center"><img src="../../img/02-zone-conduit-example.svg" width="900" alt="Zone &amp; Conduit 實際劃分範例"></p>
 
 所有東西在同一層 L2/L3 網路。ARP 廣播看得到彼此、TCP port 能通就通。
 

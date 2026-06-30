@@ -118,7 +118,7 @@
 
 ## 4. 長期 Roadmap（6-18 個月）
 
-```<p align="center"><img src="../../img/19-gap-roadmap.svg" width="700" alt="合規補強 Roadmap"></p>```
+<p align="center"><img src="../../img/19-gap-roadmap.svg" width="700" alt="合規補強 Roadmap"></p>
 
 ## 5. 下一篇
 

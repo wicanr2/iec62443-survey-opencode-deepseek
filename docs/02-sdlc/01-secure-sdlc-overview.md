@@ -66,7 +66,7 @@ IEC 62443-4-1 把安全開發生命週期拆成八個 Practice，按軟體工程
 
 ## 4. 4-1 在認證生態中的角色
 
-<p align="center"><img src="../../img/05-sdlc-cert-role.svg" width="900" alt="IEC 62443-4-1 SDLC 在認證生態中的角色：SDLA 是 CSA/SSA 的前提"></p>
+<p align="center"><img src="../../img/05-sdlc-cert-role.svg" width="100%" alt="IEC 62443-4-1 SDLC 在認證生態中的角色"></p>
 
 - **SDLA（Secure Development Lifecycle Assurance）**：獨立認證，只驗開發流程（不驗產品）
 - **CSA（Component Security Assurance）**：認證產品 + 開發流程——產品要過 4-2，開發流程要過 4-1

@@ -24,7 +24,7 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 
 ### 2.1 方案之間的關係
 
-```<p align="center"><img src="../../img/12-isasecure-relation.svg" width="560" alt="ISASecure 認證方案關係"></p>```
+<p align="center"><img src="../../img/12-isasecure-relation.svg" width="560" alt="ISASecure 認證方案關係"></p>
 
 > SDLA 是 CSA 和 SSA 的**前置條件**——產品供應商必須先證明開發流程合規（SDLA），再去認證產品（CSA）。但你可以同時送審兩者。
 
@@ -32,7 +32,7 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 
 ### 3.1 典型 CSA 認證流程
 
-```<p align="center"><img src="../../img/17-csa-5step-process.svg" width="600" alt="CSA 認證五步驟"></p>```
+<p align="center"><img src="../../img/17-csa-5step-process.svg" width="600" alt="CSA 認證五步驟"></p>
 
 ### 3.2 時間與費用概念
 
@@ -49,7 +49,7 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 
 ### 4.1 建議路徑
 
-```<p align="center"><img src="../../img/16-certification-path.svg" width="700" alt="ISASecure 認證三階段路徑"></p>```
+<p align="center"><img src="../../img/16-certification-path.svg" width="700" alt="ISASecure 認證三階段路徑"></p>
 
 ### 4.2 為什麼先做 SDLA？
 
