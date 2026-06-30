@@ -1,13 +1,10 @@
 # Zone & Conduit — 信任邊界的根本推導
 
-> 一句話定位：Zone & Conduit 是 IEC 62443 的空間模型——回答「在一個工廠裡，信任邊界該劃在哪裡、區與區之間的通訊怎麼控管」。它不只是一張網路架構圖，而是從「一個平面網路被攻破一點就全倒」這個根本缺陷逼出來的必然解法。
->
-> 前置：[IEC 62443 全景圖](01-iec62443-overview.md)（理解 OT 資安的根本問題）
-> 下一篇：[Security Levels — SL-T/SL-C/SL-A 三角](03-security-levels.md)
+Zone & Conduit 是 IEC 62443 的空間模型——回答「在一個工廠裡，信任邊界該劃在哪裡、區與區之間的通訊怎麼控管」。它不只是一張網路架構圖，而是從「一個平面網路被攻破一點就全倒」這個根本缺陷逼出來的必然解法。
 
-## 1. 根本問題：為什麼不能全部放在同一個網路？
+下一篇：[→ Security Levels — SL-T/SL-C/SL-A 三角](03-security-levels.md)
 
-### 場景
+## 為什麼不能全部放在同一個網路？
 
 一個典型的半導體廠網路：
 
@@ -21,11 +18,11 @@
 
 IT 世界早就解決了這個問題：DMZ、VLAN、防火牆規則、zero-trust network。但 IT 的解不能直接搬進 OT，因為：
 
-- **PLC 不跑防毒**——它是一顆微控制器，沒有 agent-based EDR
-- **工業協定不支援 TLS**——Modbus TCP 裸奔，EtherNet/IP 的 CIP Security 是新東西、舊設備不支援
-- **不能裝 patch**——見上一篇的生命週期問題
+- PLC 不跑防毒——它是一顆微控制器，沒有 agent-based EDR
+- 工業協定不支援 TLS——Modbus TCP 裸奔，EtherNet/IP 的 CIP Security 是新東西、舊設備不支援
+- 不能裝 patch——見上一篇的生命週期問題
 
-所以 OT 需要的不是「在每個端點做安全」（做不了），而是 **在網路邊界做安全**——把不同信任等級的設備物理/邏輯隔離，在區與區之間放置安全控制。
+所以 OT 需要的不是「在每個端點做安全」（做不了），而是 在網路邊界做安全——把不同信任等級的設備物理/邏輯隔離，在區與區之間放置安全控制。
 
 這就是 Zone & Conduit 的根本動機。
 
@@ -62,12 +59,12 @@ IT 世界早就解決了這個問題：DMZ、VLAN、防火牆規則、zero-trust
 
 | Level | 名稱 | 典型資產 | 信任等級 | 典型 SL-T |
 |---|---|---|---|---|
-| Level 0 | **實體製程 (Physical Process)** | 感測器、致動器、馬達 | 不需網路安全（但需實體安全） | — |
-| Level 1 | **基本控制 (Basic Control)** | PLC、RTU、DCS 控制器 | **最高信任** | SL 3-4 |
-| Level 2 | **區域監控 (Area Supervisory)** | HMI、SCADA、Historian | 高信任 | SL 2-3 |
-| Level 3 | **廠區營運 (Site Operations)** | MES、Batch Mgmt | 中信任 | SL 2 |
-| Level 3.5 | **DMZ** | Patch server、AV server、Remote access | **邊界緩衝** | SL 2 |
-| Level 4 | **企業網路 (Enterprise)** | ERP、Email、Internet | 低信任（IT standard） | N/A |
+| Level 0 | 實體製程 (Physical Process) | 感測器、致動器、馬達 | 不需網路安全（但需實體安全） | — |
+| Level 1 | 基本控制 (Basic Control) | PLC、RTU、DCS 控制器 | **最高信任** | SL 3-4 |
+| Level 2 | 區域監控 (Area Supervisory) | HMI、SCADA、Historian | 高信任 | SL 2-3 |
+| Level 3 | 廠區營運 (Site Operations) | MES、Batch Mgmt | 中信任 | SL 2 |
+| Level 3.5 | DMZ | Patch server、AV server、Remote access | **邊界緩衝** | SL 2 |
+| Level 4 | 企業網路 (Enterprise) | ERP、Email、Internet | 低信任（IT standard） | N/A |
 
 > Level 0 不是網路設備，不直接適用 IEC 62443 的網路安全要求，但 Level 1 控制 Level 0 的設備，所以 Level 1 的安全性直接影響物理世界安全。
 
@@ -108,10 +105,10 @@ Conduit 不是一個具體的產品，它是一個安全功能的組合：
 
 | 型態 | 說明 | 典型場景 |
 |---|---|---|
-| **防火牆 + ACL** | 最常見：L3-L4 過濾 | Level 3 ↔ Level 4 DMZ |
+| 防火牆 + ACL | 最常見：L3-L4 過濾 | Level 3 ↔ Level 4 DMZ |
 | **工業 DPI** | L7 應用層辨識 Modbus/DNP3/EtherNet/IP 指令 | Level 1 PLC ↔ Level 2 SCADA |
-| **Data Diode** | 純單向（光電轉換，物理保證不回傳） | Level 2 → Level 3.5 (historian 只出不進) |
-| **VPN / 加密通道** | 跨 WAN 或遠端存取 | Remote maintenance ↔ DMZ |
+| Data Diode | 純單向（光電轉換，物理保證不回傳） | Level 2 → Level 3.5 (historian 只出不進) |
+| VPN / 加密通道 | 跨 WAN 或遠端存取 | Remote maintenance ↔ DMZ |
 
 > Data diode 是一個很有意思的極端案例：它以物理方式保證資料只能單向流動（Tx 端是 LED、Rx 端是 photodiode，沒有反向通道）。這用於「高安全 Zone 要把資料送給低安全 Zone，但絕對不准低安全 Zone 發任何東西進高安全 Zone」的場景。
 
@@ -156,49 +153,41 @@ Zone & Conduit 模型對產品開發者的影響，不是「你要實作 Conduit
 
 | 開發者面向 | 影響 |
 |---|---|
-| **你的產品是一個組件** | 你產品的 SL-C 會決定它能被放進 SL-T 多少的 Zone。SL-C 1 的組件放進 SL-T 3 的 Zone 時，必須有系統層補償（CCSC 2），並記載於組件文件中。 |
-| **你的產品的通訊需求** | 產品文件要寫清楚「需要跟什麼通，用什麼協定」，這直接影響 Conduit design——整合商必須知道你會開哪些 port |
-| **你的產品的限制** | 產品做不到的安全功能（如不支援 TLS）必須文件化，讓整合商可以在 Conduit 上補償——這就是 CCSC 2 的實踐 |
-| **你的產品的通訊方向** | 如果產品只發送資料（如 sensor），寫明「只 outgoing」可以幫助整合商選 Data diode Conduit |
+| 你的產品是一個組件 | 你產品的 SL-C 會決定它能被放進 SL-T 多少的 Zone。SL-C 1 的組件放進 SL-T 3 的 Zone 時，必須有系統層補償（CCSC 2），並記載於組件文件中。 |
+| 你的產品的通訊需求 | 產品文件要寫清楚「需要跟什麼通，用什麼協定」，這直接影響 Conduit design——整合商必須知道你會開哪些 port |
+| 你的產品的限制 | 產品做不到的安全功能（如不支援 TLS）必須文件化，讓整合商可以在 Conduit 上補償——這就是 CCSC 2 的實踐 |
+| 你的產品的通訊方向 | 如果產品只發送資料（如 sensor），寫明「只 outgoing」可以幫助整合商選 Data diode Conduit |
 
-## 6. 小結
 
 - Zone = 同信任等級的資產群組（因為平面網路一個洞全死，必須切）
 - Conduit = Zone 之間唯一的通道，上面堆安全控制
 - Defense-in-depth = 多層 Zone + 多層 Conduit
 - 每個 Zone 有自己的 SL-T（見下篇），Conduit 的強度由兩端 Zone 的安全需求決定
 
-## 7. 下一篇
-
-劃好 Zone 之後，下一個問題：**每個 Zone 要防到多強？SL1-4 怎麼定義？SL-T、SL-C、SL-A 三者什麼關係？** → [Security Levels — SL-T/SL-C/SL-A 三角](03-security-levels.md)
-
 ---
 
-相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-3-2 官方頁](https://webstore.iec.ch/en/publication/30727)
 
-
----
 
 ## 本文使用縮寫對照
 
 | 縮寫 | 全稱 | 說明 |
 |---|---|---|
-| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
-| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| ACL | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| AMR | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
 | **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
-| **DCS** | Distributed Control System | 分散式控制系統 |
-| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
-| **HMI** | Human-Machine Interface | 人機介面 |
-| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
-| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
-| **RTU** | Remote Terminal Unit | 遠端終端單元 |
-| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| DCS | Distributed Control System | 分散式控制系統 |
+| DPI | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| HMI | Human-Machine Interface | 人機介面 |
+| MES | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| PLC | Programmable Logic Controller | 可程式邏輯控制器 |
+| RTU | Remote Terminal Unit | 遠端終端單元 |
+| SCADA | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
 | **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
 | **SL-A** | Achieved Security Level | 達成安全等級，部署後經評估確認的實際等級 |
 | **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
 | **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
-| **SUC** | System Under Consideration | 評估目標系統，風險評估的範圍邊界 |
-| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
-| **VLAN** | Virtual LAN | 虛擬區域網路，邏輯隔離 |
+| SUC | System Under Consideration | 評估目標系統，風險評估的範圍邊界 |
+| TLS | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| VLAN | Virtual LAN | 虛擬區域網路，邏輯隔離 |
 
 > 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

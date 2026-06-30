@@ -6,7 +6,7 @@
 
 ## 一、合規檢查表 / 審計工具
 
-| Repo | ★ | 說明 | 技術 |
+| Repo |  | 說明 | 技術 |
 |---|---|---|---|
 | [isecwire/iec62443-audit](https://github.com/isecwire/iec62443-audit) | 0 | IEC 62443-3-3 + 4-2 互動式評估，含 gap analysis、TUI、HTML/JSON/CSV 匯出 | Python |
 | [icscheck-tool/icscheck](https://github.com/icscheck-tool/icscheck) | 4 | ICS/SCADA 單機審計：36+ security controls 對照 FR1-7 & NIS2，WinCC 整合，HTML 報告 | PowerShell |
@@ -19,7 +19,7 @@
 
 ## 二、GAP 分析 / 風險評估
 
-| Repo | ★ | 說明 | 技術 |
+| Repo |  | 說明 | 技術 |
 |---|---|---|---|
 | [MCYP-UniversidadReyJuanCarlos/19-20_frripe](https://github.com/MCYP-UniversidadReyJuanCarlos/19-20_frripe) | 2 | IEC 62443 方法論量化風險分析，計算 Target SL | VBA |
 | [grandMa5ter/IEC62443_Dashboard](https://github.com/grandMa5ter/IEC62443_Dashboard) | 1 | Web dashboard 計算 Zone SL-T vs SL-C 對比 | HTML |
@@ -31,7 +31,7 @@
 
 ## 三、參考架構 (Reference Architecture)
 
-| Repo | ★ | 說明 | 技術 |
+| Repo |  | 說明 | 技術 |
 |---|---|---|---|
 | [rick-rami94/manufacturing-security-reference-architecture](https://github.com/rick-rami94/manufacturing-security-reference-architecture) | 0 | 製造業 OT/ICS 安全參考架構，對照 62443 + NIST 800-82r3 + CIS v8.1 | Mermaid |
 | [rick-rami94/logistics-security-reference-architecture](https://github.com/rick-rami94/logistics-security-reference-architecture) | 0 | 24/7 物流配銷中心 IT/OT 分割參考架構 | Mermaid |
@@ -41,7 +41,7 @@
 
 ## 四、教育 / 訓練資源
 
-| Repo | ★ | 說明 | 技術 |
+| Repo |  | 說明 | 技術 |
 |---|---|---|---|
 | [SecurityWithAdarsh/OT-ICS-Security-Notes](https://github.com/SecurityWithAdarsh/OT-ICS-Security-Notes) | 7 | 完整 OT/ICS 安全筆記：SCADA/PLC/DCS、IEC 62443、NIST CSF、攻擊技術 | Markdown |
 | [JHaimaka/CRA-IEC62443-SBOM](https://github.com/JHaimaka/CRA-IEC62443-SBOM) | 0 | 芬蘭開放訓練教材：EU CRA + IEC 62443 + SBOM (Syft/Grype) | 文件 |
@@ -53,7 +53,7 @@
 
 ## 五、Lab / 測試平台
 
-| Repo | ★ | 說明 | 技術 |
+| Repo |  | 說明 | 技術 |
 |---|---|---|---|
 | [michailidimaria/Virtual-Lab-ICS-Segmentation](https://github.com/michailidimaria/Virtual-Lab-ICS-Segmentation) | 0 | VirtualBox + OPNsense 多區隔工業環境 lab (Purdue Model) | VirtualBox |
 | [gammahazard/harvester-os-portfolio](https://github.com/gammahazard/harvester-os-portfolio) | 1 | 實體 OT/ICS 測試平台：Siemens S7-1200 + RevPi + Raspberry Pi | Python |
@@ -64,7 +64,7 @@
 
 ## 六、安全工具 / 平台
 
-| Repo | ★ | 說明 | 技術 |
+| Repo |  | 說明 | 技術 |
 |---|---|---|---|
 | [SiteQ8/OpenICS-Atlas](https://github.com/SiteQ8/OpenICS-Atlas) | 2 | ICS/OT 曝險情報平台：8 協定、Purdue 模型、72 項控制、Shodan 整合 | TypeScript |
 | [SiteQ8/ConduitShield](https://github.com/SiteQ8/ConduitShield) | 0 | OT/IIoT 工具：資產發現、SBOM、zone&conduit 政策、62443 合規 | — |
@@ -74,7 +74,7 @@
 
 ## 七、ICS 安全測試框架 (間接相關，但工控安全必知)
 
-| Repo | ★ | 說明 |
+| Repo |  | 說明 |
 |---|---|---|
 | [dark-lbp/isf](https://github.com/dark-lbp/isf) | 1,105 | ICS Exploitation Framework，工業控制系統滲透測試 |
 | [nsacyber/GRASSMARLIN](https://github.com/nsacyber/GRASSMARLIN) | 1,059 | NSA 開發的 ICS/SCADA 被動網路拓撲發現工具 |
@@ -87,7 +87,7 @@
 
 ## 八、協定安全工具 (Modbus / DNP3 / S7)
 
-| Repo | ★ | 說明 |
+| Repo |  | 說明 |
 |---|---|---|
 | [pymodbus-dev/pymodbus](https://github.com/pymodbus-dev/pymodbus) | 2,717 | Python Modbus 協定實作 (RTU/TCP) |
 | [dnp3/opendnp3](https://github.com/dnp3/opendnp3) | 332 | DNP3 協定棧 (C++/Java/.NET) |
@@ -99,7 +99,7 @@
 
 ## 九、嵌入式 Secure Boot 實作
 
-| Repo | ★ | 說明 |
+| Repo |  | 說明 |
 |---|---|---|
 | [mcu-tools/mcuboot](https://github.com/mcu-tools/mcuboot) | 1,943 | 32-bit MCU Secure Bootloader (Zephyr/Mynewt) |
 | [wolfSSL/wolfBoot](https://github.com/wolfSSL/wolfBoot) | 503 | 可攜式 OS 無關 MCU Secure Bootloader + OTA |
@@ -109,26 +109,26 @@
 
 ## 十、IEC 62443-4-2 直接實作
 
-| Repo | ★ | 說明 |
-|---|---|---|
-| [neutrinoguy/VoidProbe](https://github.com/neutrinoguy/VoidProbe) | 0 | Linux 嵌入式設備 4-2 DRRM (DoS/資源管理) 即時監控 | Go |
-| [Harsh-467/Secure-iiot](https://github.com/Harsh-467/Secure-iiot) | 0 | 基於 4-2 的 IIoT 安全控制實作 | Python |
-| [ValtteriL/iec62443-svv-demo](https://github.com/ValtteriL/iec62443-svv-demo) | 3 | 4-1 安全驗證與確認自動化 | PHP |
+| Repo | 說明 |
+|---|---|
+| [neutrinoguy/VoidProbe](https://github.com/neutrinoguy/VoidProbe) | Linux 嵌入式設備 4-2 DRRM (DoS/資源管理) 即時監控 |
+| [Harsh-467/Secure-iiot](https://github.com/Harsh-467/Secure-iiot) | 基於 4-2 的 IIoT 安全控制實作 |
+| [ValtteriL/iec62443-svv-demo](https://github.com/ValtteriL/iec62443-svv-demo) | 4-1 安全驗證與確認自動化 |
 
 ---
 
 ## 十一、形式化驗證
 
-| Repo | ★ | 說明 |
-|---|---|---|
-| [kuliktomas/iec62443verification](https://github.com/kuliktomas/iec62443verification) | 0 | TLA+ 形式化驗證 ICS 是否符合 4-3-3 | TLA+ |
+| Repo | 說明 |
+|---|---|
+| [kuliktomas/iec62443verification](https://github.com/kuliktomas/iec62443verification) | TLA+ 形式化驗證 ICS 是否符合 4-3-3 |
 
 ---
 
 ## 生態觀察
 
 - IEC 62443 在 GitHub 上仍屬**小眾領域**：最高 star 僅 15（合規工具）、大部分 repo 為 2025-2026 新建
-- **合規檢查表/審計腳本**佔最多數，但**開源安全控制實作**極少（多為文件/框架）
+- 合規檢查表/審計腳本佔最多數，但開源安全控制實作極少（多為文件/框架）
 - ICS 安全測試生態非常成熟：ISF、GRASSMARLIN、Malcolm、conpot 為四大基石
 - Secure Boot 首推 mcuboot（MCU）和 wolfBoot（跨平台）
 - 政策即程式碼 (OPA Rego) 是新趨勢：`rego_policy_libraries` 將 51 條 SR 轉為可自動執行的政策

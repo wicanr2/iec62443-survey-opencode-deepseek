@@ -1,19 +1,18 @@
 # Security Levels (SL) — SL-T / SL-C / SL-A 三角與威脅模型
 
-> 一句話定位：Security Level 回答「**要防到多強**」——不是一個泛泛的「高/中/低」，而是按攻擊者的能力/資源/動機分成 4 級，再透過 SL-T / SL-C / SL-A 三層模型把風險評估→產品選型→部署驗收串成閉環。
->
-> 前置：[Zone & Conduit](02-zone-and-conduit.md)（理解信任邊界後，每個 Zone 要定 SL-T）
+Security Level 回答「**要防到多強**」——不是一個泛泛的「高/中/低」，而是按攻擊者的能力/資源/動機分成 4 級，再透過 SL-T / SL-C / SL-A 三層模型把風險評估→產品選型→部署驗收串成閉環。
+
 > 下一篇：[FR 1-7 全景](04-foundational-requirements.md)（SL 落實到具體的 7 個基礎安全需求）
 
-## 1. 根本問題：「夠安全」是多安全？
+## 「夠安全」是多安全？
 
-每個安全設計都撞到同一個牆：**沒有絕對安全，只有相對於對手的強度。**
+每個安全設計都撞到同一個牆：沒有絕對安全，只有相對於對手的強度。
 
 你不需要防核彈來鎖腳踏車。同理，控制一座發電廠的 PLC 和控制你家陽台 LED 燈的 ESP32 不必做到一樣的安全強度。
 
 IT 的「H/M/L」三分法（high/medium/low）太模糊。「高」到底是防腳本小子還是防國家級？不同整合商對「高」的定義不同 → 產品供應商不知道要做到什麼程度 → 業主買了「號稱高安全」產品發現擋不住針對性攻擊。
 
-IEC 62443 的回答：**用攻擊者模型代替主觀評級。**
+IEC 62443 的回答：用攻擊者模型代替主觀評級。
 
 ## 2. SL 1–4：攻擊者能力 × 資源 × 動機
 
@@ -24,12 +23,12 @@ IEC 62443 的回答：**用攻擊者模型代替主觀評級。**
 | **SL 0** | 無 | 無安全需求 | — |
 | **SL 1** | 意外/誤觸 | 無蓄意攻擊；操作失誤、組態錯誤、軟體 bug | 工程師不小心改了閾值；設備預設密碼被無意撞見 |
 | **SL 2** | 一般駭客 | **蓄意**，但手段簡單、資源少、技能一般、動機低 | 網路掃描 + default password login；公開 exploit 腳本 |
-| **SL 3** | 針對性攻擊 | 蓄意，複雜手段、中等資源、**OT 領域專精**、中等動機 | 專責團隊，了解工業協定 (Modbus/EtherNet/IP)；客製化惡意碼；social engineering 含物理入侵 |
+| **SL 3** | 針對性攻擊 | 蓄意，複雜手段、中等資源、OT 領域專精、中等動機 | 專責團隊，了解工業協定 (Modbus/EtherNet/IP)；客製化惡意碼；social engineering 含物理入侵 |
 | **SL 4** | 國家級 | 蓄意，複雜手段、**大量資源**、OT 領域專精、高動機 | APT（進階持續性威脅）、供應鏈攻擊、零時差漏洞組合攻擊；Stuxnet 等級 |
 
 ### 2.2 為什麼用攻擊者模型而不是技術規格？
 
-**第一性原理推導**：
+第一性原理推導：
 
 1. 「安全」是一個相對概念，必須有參照對象
 2. 最合理的參照對象是「誰會來攻擊你」——因為防護的強度取決於對手的強度
@@ -40,7 +39,7 @@ IEC 62443 的回答：**用攻擊者模型代替主觀評級。**
 | 「要支援 AES-256」 | SL 3 的攻擊者不是靠破 AES-256，是靠偷你的金鑰 / 釣魚你的員工 |
 | 「要有防火牆」 | SL 2 防腳本小子，能用 ACL 擋住掃描即可；SL 4 要防供應鏈攻擊，防火牆沒用 |
 
-**關鍵洞見**：SL 分級問的不是「你有什麼安全功能」，而是「你擋得住哪一級的攻擊者」。同樣一個 FR（例如 FR1 識別與鑑別），SL 1 可能只要帳密不重複，SL 3 就要求多因素認證 + 硬體安全模組。
+：SL 分級問的不是「你有什麼安全功能」，而是「你擋得住哪一級的攻擊者」。同樣一個 FR（例如 FR1 識別與鑑別），SL 1 可能只要帳密不重複，SL 3 就要求多因素認證 + 硬體安全模組。
 
 ## 3. SL-T / SL-C / SL-A：安全等級的三層閉環
 
@@ -54,9 +53,9 @@ IEC 62443 把安全等級拆成三層，每一層由不同角色負責：
 
 | 縮寫 | 全稱 | 中文 | 誰定義 | 什麼時候 |
 |---|---|---|---|---|
-| **SL-T** | Target Security Level | 目標安全等級 | **Asset Owner**（業主）透過風險評估 (-3-2) | 設計階段：對每個 Zone/Conduit 設定 |
-| **SL-C** | Capability Security Level | 能力安全等級 | **Product Supplier**（供應商）透過開發與測試 (-4-1/-4-2) | 開發階段：產品出廠時宣告 |
-| **SL-A** | Achieved Security Level | 達成安全等級 | **System Integrator**（整合商）整合後評估 | 部署後：實際量測確認達到 SL-T |
+| **SL-T** | Target Security Level | 目標安全等級 | Asset Owner（業主）透過風險評估 (-3-2) | 設計階段：對每個 Zone/Conduit 設定 |
+| **SL-C** | Capability Security Level | 能力安全等級 | Product Supplier（供應商）透過開發與測試 (-4-1/-4-2) | 開發階段：產品出廠時宣告 |
+| **SL-A** | Achieved Security Level | 達成安全等級 | System Integrator（整合商）整合後評估 | 部署後：實際量測確認達到 SL-T |
 
 ### 3.2 閉環邏輯
 
@@ -130,53 +129,45 @@ SL 定義「強度」，FR 定義「什麼要安全」。兩者的關係是：
 
 下一篇會展開每個 FR 的根本問題、在各 SL 等級的差異。
 
-## 6. 小結
 
 - SL 1-4 = 攻擊者模型的量化（能力 × 資源 × 動機），不是主觀評級
 - SL-T / SL-C / SL-A = 三層閉環：業主設定目標 → 供應商宣告能力 → 整合商驗證達成
 - 一個產品的 SL-C **不是一個數字**，而是每個 FR 獨立宣告
 - 某 FR 的 SL-C < SL-T 時，可以用系統層補償（CCSC 2）
 
-## 7. 下一篇
-
-理解了「要防到多強 (SL)」之後，下一個問題：**安全要顧哪些面向？FR 1-7 到底是哪七個？他們從哪個根本問題推導出來？** → [FR 1-7 全景 — 七個基礎安全需求的由來](04-foundational-requirements.md)
-
 ---
 
-相關：[CONTEXT.md](../../CONTEXT.md)、[IEC 62443-3-2 (風險評估與 SL 定義) 官方頁](https://webstore.iec.ch/en/publication/30727)
 
-
----
 
 ## 本文使用縮寫對照
 
 | 縮寫 | 全稱 | 說明 |
 |---|---|---|
-| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
-| **AES** | Advanced Encryption Standard | 進階加密標準，對稱式加密演算法 |
-| **AMR** | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
-| **APT** | Advanced Persistent Threat | 進階持續性威脅，國家級/組織化攻擊 |
+| ACL | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| AES | Advanced Encryption Standard | 進階加密標準，對稱式加密演算法 |
+| AMR | Autonomous Mobile Robot | 自主移動機器人/搬運車 |
+| APT | Advanced Persistent Threat | 進階持續性威脅，國家級/組織化攻擊 |
 | **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
-| **DC** | Data Confidentiality | 資料機密性 (FR4) |
-| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| DC | Data Confidentiality | 資料機密性 (FR4) |
+| DPI | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
 | **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
 | **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
-| **MES** | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
-| **MFA** | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
-| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
+| MES | Manufacturing Execution System | 製造執行系統，管理工單與生產排程 |
+| MFA | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
+| PLC | Programmable Logic Controller | 可程式邏輯控制器 |
 | **RA** | Resource Availability | 資源可用性 (FR7) |
-| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| RBAC | Role-Based Access Control | 基於角色的存取控制 |
 | **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
-| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
-| **SI** | System Integrity | 系統完整性 (FR3) |
-| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| SCADA | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| SI | System Integrity | 系統完整性 (FR3) |
+| SIEM | Security Information and Event Management | 資安資訊與事件管理系統 |
 | **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
 | **SL-A** | Achieved Security Level | 達成安全等級，部署後經評估確認的實際等級 |
 | **SL-C** | Capability Security Level | 能力安全等級，組件或系統能達到的安全等級 |
 | **SL-T** | Target Security Level | 目標安全等級，業主經風險評估後設定 |
-| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| TLS | Transport Layer Security | 傳輸層安全協定，加密通訊 |
 | **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
 | **UC** | Use Control | 使用控制 (FR2) |
-| **WMS** | Warehouse Management System | 倉儲管理系統 |
+| WMS | Warehouse Management System | 倉儲管理系統 |
 
 > 完整術語表見 [CONTEXT.md](../../CONTEXT.md)

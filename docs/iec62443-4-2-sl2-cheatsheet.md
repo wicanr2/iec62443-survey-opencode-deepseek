@@ -9,7 +9,7 @@
 | SL | 防什麼 | 攻擊者 | 4-2 要求的本質變化 |
 |---|---|---|---|
 | SL 1 | 意外/誤觸 | 無蓄意 | 基本識別、無須強鑑別 |
-| **SL 2** | **一般駭客** | 蓄意、簡單手段、低資源 | **強制鑑別 + 簽章 + 加密 + 分區** |
+| **SL 2** | **一般駭客** | 蓄意、簡單手段、低資源 | 強制鑑別 + 簽章 + 加密 + 分區 |
 | SL 3 | 針對性攻擊 | 專精 OT、中資源 | MFA + Secure Boot + 完整金鑰管理 |
 | SL 4 | 國家級 | 大量資源、APTs | 硬體信任根 + 雙人授權 + 抗量子準備 |
 
@@ -23,8 +23,8 @@
 
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
-| **使用者鑑別** | 帳密強制 + 複雜度規則 + 帳號鎖定 | SL2 + **MFA** + 防 replay | SL3 + 硬體 token (FIDO2/smart card) |
-| **裝置鑑別** | PSK 或簡易憑證 | **x509 mTLS** 雙向 + 憑證生命週期管理 | SL3 + **硬體安全模組 (SE/HSM)** 保護私鑰 |
+| **使用者鑑別** | 帳密強制 + 複雜度規則 + 帳號鎖定 | SL2 + MFA + 防 replay | SL3 + 硬體 token (FIDO2/smart card) |
+| **裝置鑑別** | PSK 或簡易憑證 | x509 mTLS 雙向 + 憑證生命週期管理 | SL3 + 硬體安全模組 (SE/HSM) 保護私鑰 |
 | **預設密碼** | 出廠隨機密碼或首次開機強制修改 | 同左 | 同左 |
 | **程序鑑別** | API key / service token | OAuth client credential + mTLS | 硬體綁定 token |
 
@@ -36,9 +36,9 @@
 
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
-| **授權模型** | RBAC（多角色）| SL2 + **職責分離 (SoD)** | SL3 + 動態授權 + **雙人授權** |
+| **授權模型** | RBAC（多角色）| SL2 + 職責分離 (SoD) | SL3 + 動態授權 + **雙人授權** |
 | **最小權限** | 強制 | 強制 + 稽核證明 | 強制 + 自動檢查 |
-| **Session 管理** | 閒置逾時自動鎖定 | SL2 + 最大 concurrent session 限制 | SL3 + 遠端強制登出 |
+| Session 管理 | 閒置逾時自動鎖定 | SL2 + 最大 concurrent session 限制 | SL3 + 遠端強制登出 |
 
 **常見不合格**：DevMode flag 全繞過、所有人 admin、無 session timeout
 
@@ -48,11 +48,11 @@
 
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
-| **韌體/軟體簽章** | 數位簽章驗證（非 CRC）| SL2 + **anti-rollback** | SL3 + runtime integrity check |
+| 韌體/軟體簽章 | 數位簽章驗證（非 CRC）| SL2 + anti-rollback | SL3 + runtime integrity check |
 | **Secure Boot** | 建議（非強制）| **強制**（信任鏈驗證每一層）| SL3 + **硬體信任根** (OTP/eFuse) |
 | **輸入驗證** | 型別/長度驗證 | SL2 + 白名單驗證 | SL3 + 自動輸入過濾 |
 | **惡意程式防護** | — | Malware detection | Malware prevention |
-| **JTAG/SWD** | 量產後禁用（fuse lock）| 同左 | 永久禁用 |
+| JTAG/SWD | 量產後禁用（fuse lock）| 同左 | 永久禁用 |
 
 **常見不合格**：FW 更新無簽章、JTAG 未鎖、CRC 當簽章用、無 anti-rollback
 
@@ -62,9 +62,9 @@
 
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
-| **傳輸加密** | **TLS 1.2+**（禁用 SSLv3/TLS1.0/1.1/RC4/3DES）| **TLS 1.3** or IPsec | SL3 + 抗量子準備 |
+| **傳輸加密** | TLS 1.2+（禁用 SSLv3/TLS1.0/1.1/RC4/3DES）| TLS 1.3 or IPsec | SL3 + 抗量子準備 |
 | **靜態加密** | 建議 | **強制**（設定檔/金鑰庫加密）| SL3 + 硬體安全儲存 |
-| **金鑰管理** | 基本儲存（非 hardcode）| 安全金鑰管理（輪替/撤銷）| **HSM 保護的金鑰 + 內部操作** |
+| **金鑰管理** | 基本儲存（非 hardcode）| 安全金鑰管理（輪替/撤銷）| HSM 保護的金鑰 + 內部操作 |
 | **資訊殘留** | — | 安全抹除 | 自動殘留清除 |
 
 **常見不合格**：HTTP 明文、無 TLS、私鑰存一般 flash、無 TRNG（用 PRNG 生金鑰）
@@ -76,7 +76,7 @@
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
 | **預設策略** | **Default deny**（所有服務預設關閉）| 同左 | 同左 |
-| **存取控制** | ACL (IP/port whitelist) | SL2 + 工業協定 **DPI** | SL3 + 實體隔離/Data diode |
+| **存取控制** | ACL (IP/port whitelist) | SL2 + 工業協定 DPI | SL3 + 實體隔離/Data diode |
 | **最小暴露** | 服務不綁 0.0.0.0 | 同左 | 獨立 NIC 硬體隔離 |
 | **文件** | 通訊矩陣（來源/目的/協定/port/方向）| 同左 | 同左 |
 
@@ -88,8 +88,8 @@
 
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
-| **事件記錄** | 安全相關事件記錄（登入/失敗/變更）| SL2 + **防篡改日誌 (HMAC)** | SL3 + forensic readiness |
-| **匯出** | 可匯出 (syslog) | **即時匯出 (syslog over TLS)** | 同左 |
+| **事件記錄** | 安全相關事件記錄（登入/失敗/變更）| SL2 + 防篡改日誌 (HMAC) | SL3 + forensic readiness |
+| **匯出** | 可匯出 (syslog) | 即時匯出 (syslog over TLS) | 同左 |
 | **告警** | 本機告警 | 中央 SIEM 整合 | 自動化事件響應 (SOAR) |
 | **時間同步** | 建議 | **強制 NTP** | 同左 |
 
@@ -102,9 +102,9 @@
 | 要求 | SL 2 | SL 3 | SL 4 |
 |---|---|---|---|
 | **DoS 防護** | 抗 moderate DoS (rate limiting) | 抗 severe DoS | 抗 extreme DoS |
-| **資源管理** | 基本資源監控 | 資源使用上限 + **安全功能不降級** | 自動資源調節 |
-| **故障安全** | **Fail-safe** 設計（斷訊→安全狀態）| SL2 + 驗證過的 fail-safe | 自動安全復原 |
-| **備援** | — | 可支援 standby | **Hot standby**（無感切換） |
+| **資源管理** | 基本資源監控 | 資源使用上限 + 安全功能不降級 | 自動資源調節 |
+| **故障安全** | Fail-safe 設計（斷訊→安全狀態）| SL2 + 驗證過的 fail-safe | 自動安全復原 |
+| **備援** | — | 可支援 standby | Hot standby（無感切換） |
 | **斷電恢復** | 自動恢復到斷電前安全狀態 | SL2 + 完整性檢查 | 同左 |
 
 **常見不合格**：無 rate limit → 遠端 DoS、安全功能 resource 不足時降級、watchdog 只監 CPU 不監應用
@@ -117,11 +117,11 @@
 |---|---|---|---|---|
 | **FR1** | 使用者 auth + API token | 使用者 + 裝置憑證 | 使用者 + OS 帳號 + TPM | 管理介面 auth |
 | **FR2** | RBAC (app level) | RBAC (firmware level) | OS DAC + app RBAC | 管理介面 RBAC |
-| **FR3** | 輸入驗證 + 相依掃描 | **Secure Boot + FW 簽章** | UEFI Secure Boot + dm-verity | FW 簽章驗證 |
-| **FR4** | TLS（倚賴 OS）| **TLS + SE 保護的私鑰** | TLS + 磁碟加密 | 管理介面 TLS |
-| **FR5** | 最小 port + CORS 限制 | **Default deny + 綁定內部 IP** | OS firewall + VLAN | **核心功能：ACL/VLAN/DPI** |
+| **FR3** | 輸入驗證 + 相依掃描 | Secure Boot + FW 簽章 | UEFI Secure Boot + dm-verity | FW 簽章驗證 |
+| **FR4** | TLS（倚賴 OS）| TLS + SE 保護的私鑰 | TLS + 磁碟加密 | 管理介面 TLS |
+| **FR5** | 最小 port + CORS 限制 | Default deny + 綁定內部 IP | OS firewall + VLAN | 核心功能：ACL/VLAN/DPI |
 | **FR6** | Structured logging | Syslog + NTP | Syslog + SIEM agent | Syslog + NetFlow |
-| **FR7** | Rate limiting + graceful degradation | **Watchdog + fail-safe** | Kernel watchdog + cgroup | Control plane protection |
+| **FR7** | Rate limiting + graceful degradation | Watchdog + fail-safe | Kernel watchdog + cgroup | Control plane protection |
 
 ---
 
@@ -151,64 +151,61 @@
 | 升級點 | SL 2 | SL 3 | 最難在哪 |
 |---|---|---|---|
 | **Secure Boot** | 建議 | **強制** | 需要硬體信任根（OTP/eFuse），不是純軟體能做到的 |
-| **MFA + x509** | 密碼 + 簡單憑證 | **多因素 + mTLS** | 需要 PKI 基礎設施 + SE 儲存私鑰 |
-| **金鑰管理** | 基本儲存 | **完整生命週期管理** | 金鑰輪替、撤銷機制、HSM 操作——組織流程的成熟度 |
+| MFA + x509 | 密碼 + 簡單憑證 | 多因素 + mTLS | 需要 PKI 基礎設施 + SE 儲存私鑰 |
+| **金鑰管理** | 基本儲存 | 完整生命週期管理 | 金鑰輪替、撤銷機制、HSM 操作——組織流程的成熟度 |
 
-> 如果你的產品**硬體設計還沒定案**：現在就預留 OTP/eFuse 給 public key hash、預留 I2C 介面給 SE、預留 external watchdog 腳位——這三件事在 PCB layout 之後就很難加了。
-
----
-
-相關：[CONTEXT.md](../CONTEXT.md)、[FR 1-7 全景](01-foundations/04-foundational-requirements.md)
-
+> 如果你的產品硬體設計還沒定案：現在就預留 OTP/eFuse 給 public key hash、預留 I2C 介面給 SE、預留 external watchdog 腳位——這三件事在 PCB layout 之後就很難加了。
 
 ---
+
+
 
 ## 本文使用縮寫對照
 
 | 縮寫 | 全稱 | 說明 |
 |---|---|---|
-| **ACL** | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
-| **DAC** | Discretionary Access Control | 自由選定存取控制，如 Unix permission |
-| **DC** | Data Confidentiality | 資料機密性 (FR4) |
-| **DPI** | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
-| **DoS** | Denial of Service | 服務阻斷攻擊，耗盡系統資源使其無法回應 |
+| ACL | Access Control List | 存取控制清單，定義誰能存取什麼資源 |
+| DAC | Discretionary Access Control | 自由選定存取控制，如 Unix permission |
+| DC | Data Confidentiality | 資料機密性 (FR4) |
+| DPI | Deep Packet Inspection | 深層封包檢測，辨識應用層協定內容 |
+| DoS | Denial of Service | 服務阻斷攻擊，耗盡系統資源使其無法回應 |
 | **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
 | **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
-| **FW** | Firmware | 韌體，嵌入式裝置上的軟體 |
+| FW | Firmware | 韌體，嵌入式裝置上的軟體 |
 | **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
-| **HMAC** | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
-| **HSM** | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
-| **I2C** | Inter-Integrated Circuit | 晶片間序列通訊匯流排 |
+| HMAC | Hash-based Message Authentication Code | 雜湊訊息鑑別碼，驗證完整性+來源 |
+| HSM | Hardware Security Module | 硬體安全模組，專用加密金鑰管理硬體 |
+| I2C | Inter-Integrated Circuit | 晶片間序列通訊匯流排 |
 | **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
-| **JTAG** | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
-| **JWT** | JSON Web Token | JSON 網頁令牌，輕量級認證 token 格式 |
-| **MAC** | Mandatory Access Control | 強制存取控制，如 SELinux |
-| **MFA** | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
+| JTAG | Joint Test Action Group | 聯合測試行動組，晶片除錯介面標準 |
+| JWT | JSON Web Token | JSON 網頁令牌，輕量級認證 token 格式 |
+| MAC | Mandatory Access Control | 強制存取控制，如 SELinux |
+| MFA | Multi-Factor Authentication | 多因素認證，兩個以上鑑別因子 |
 | **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
-| **NIC** | Network Interface Card | 網路介面卡 |
-| **NTP** | Network Time Protocol | 網路時間協定，同步設備時鐘 |
-| **OS** | Operating System | 作業系統 |
-| **OTP** | One-Time Programmable | 一次性可程式化記憶體 (eFuse 類) |
-| **PKI** | Public Key Infrastructure | 公開金鑰基礎設施，管理憑證發行/撤銷/輪替 |
-| **PRNG** | Pseudo-Random Number Generator | 偽隨機數產生器，軟體演算法 |
+| NIC | Network Interface Card | 網路介面卡 |
+| NTP | Network Time Protocol | 網路時間協定，同步設備時鐘 |
+| OS | Operating System | 作業系統 |
+| OTP | One-Time Programmable | 一次性可程式化記憶體 (eFuse 類) |
+| PKI | Public Key Infrastructure | 公開金鑰基礎設施，管理憑證發行/撤銷/輪替 |
+| PRNG | Pseudo-Random Number Generator | 偽隨機數產生器，軟體演算法 |
 | **RA** | Resource Availability | 資源可用性 (FR7) |
-| **RBAC** | Role-Based Access Control | 基於角色的存取控制 |
+| RBAC | Role-Based Access Control | 基於角色的存取控制 |
 | **RDF** | Restricted Data Flow | 限制資料流 (FR5) |
-| **RSA** | Rivest-Shamir-Adleman | 非對稱加密/簽章演算法 |
+| RSA | Rivest-Shamir-Adleman | 非對稱加密/簽章演算法 |
 | **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
-| **SE** | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
-| **SI** | System Integrity | 系統完整性 (FR3) |
-| **SIEM** | Security Information and Event Management | 資安資訊與事件管理系統 |
+| SE | Secure Element | 安全元件，晶片級金鑰儲存 (如 ATECC608) |
+| SI | System Integrity | 系統完整性 (FR3) |
+| SIEM | Security Information and Event Management | 資安資訊與事件管理系統 |
 | **SL** | Security Level | 安全等級，依攻擊者能力分 0-4 級 |
-| **SOAR** | Security Orchestration Automation and Response | 安全自動化協作與回應 |
-| **SWD** | Serial Wire Debug | 序列線除錯，ARM MCU 的除錯介面 |
-| **SoD** | Separation of Duties | 職責分離，一人不能同時發起+核准關鍵操作 |
-| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
-| **TPM** | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
+| SOAR | Security Orchestration Automation and Response | 安全自動化協作與回應 |
+| SWD | Serial Wire Debug | 序列線除錯，ARM MCU 的除錯介面 |
+| SoD | Separation of Duties | 職責分離，一人不能同時發起+核准關鍵操作 |
+| TLS | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| TPM | Trusted Platform Module | 可信平台模組，平台身分與金鑰儲存 |
 | **TRE** | Timely Response to Events | 事件及時回應 (FR6) |
-| **TRNG** | True Random Number Generator | 真隨機數產生器，硬體熵源 |
+| TRNG | True Random Number Generator | 真隨機數產生器，硬體熵源 |
 | **UC** | Use Control | 使用控制 (FR2) |
-| **VLAN** | Virtual LAN | 虛擬區域網路，邏輯隔離 |
-| **mTLS** | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
+| VLAN | Virtual LAN | 虛擬區域網路，邏輯隔離 |
+| mTLS | Mutual TLS | 雙向 TLS，雙方皆以憑證互相鑑別 |
 
 > 完整術語表見 [CONTEXT.md](../CONTEXT.md)

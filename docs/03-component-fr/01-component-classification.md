@@ -1,11 +1,10 @@
 # 組件分類全景 — 四類組件的邊界與 CCSC
 
-> 一句話定位：IEC 62443-4-2 不把「軟體」和「硬體」當成同一種東西來要求——它先分類（SA/ED/HD/ND），再對每類給不同的 CR 適用性。本篇定義四類組件的邊界與四個通用約束 (CCSC 1-4)。
->
-> 前置：[FR 1-7 全景](../01-foundations/04-foundational-requirements.md)
-> 下一篇：[FR 1 (IAC)：識別與鑑別控制](02-fr1-identification-authentication.md)
+IEC 62443-4-2 不把「軟體」和「硬體」當成同一種東西來要求——它先分類（SA/ED/HD/ND），再對每類給不同的 CR 適用性。本篇定義四類組件的邊界與四個通用約束 (CCSC 1-4)。
 
-## 1. 根本問題：為什麼要分類？
+下一篇：[→ FR 1 (IAC)：識別與鑑別控制](02-fr1-identification-authentication.md)
+
+## 為什麼要分類？
 
 一台跑 Linux 的工業電腦（Host Device）和一台跑 bare-metal firmware 的 PLC（Embedded Device）的安全要求不會一樣。前者有 OS 級的防護（user permissions、SELinux、firewall daemon）；後者只有自己寫的那幾 KB code——所有安全功能都要手動實作。
 
@@ -13,7 +12,7 @@
 - 對 firmware MCU 要求「跑 antivirus」→ 不可能（沒有 OS、沒有 filesystem、沒有 CPU 資源）
 - 對 pure software application 要求「secure boot」→ 不合理（它不控制開機流程，那是 host OS 的事）
 
-**分類的目的不是貼標籤，而是精準地只要求「這個類別能做得到的事」。**
+分類的目的不是貼標籤，而是精準地只要求「這個類別能做得到的事」。
 
 ## 2. 四類組件定義
 
@@ -40,7 +39,7 @@
 | SCADA 軟體（安裝在 Windows 上） | **SA** | 純軟體，倚賴 OS |
 | 一個 PLC 的 web-based 管理後台（內建在 firmware 中） | 歸入 **ED** | 管理後台是 ED 的一部分，跟 ED 一起認證 |
 
-> 關鍵原則是：**一個產品可能同時是多個類型**（例如一台 HMI = HD + 內建 SA）。認證時會對每個面向做評估。
+> 關鍵原則是：一個產品可能同時是多個類型（例如一台 HMI = HD + 內建 SA）。認證時會對每個面向做評估。
 
 ## 3. CCSC 1-4：四個通用約束
 
@@ -89,20 +88,13 @@ CCSC（Common Component Security Constraints）是四條對**所有組件類型*
 - 對 **ED**：除了上面，還管「裝置本身的鑑別」（這台 PLC 真的是工廠裡那台，不是被換過的）
 - 對 **ND**：管「管理介面的認證」和「裝置之間的認證」
 
-後續每篇 FR 會標明**各組件類型的特化要求**。
-
-## 5. 下一篇
-
-> [FR 1 (IAC)：識別與鑑別控制](02-fr1-identification-authentication.md)
+後續每篇 FR 會標明各組件類型的特化要求。
 
 第一個 FR：系統必須知道「你是誰」——人、程式、裝置，三種主體各有不同的鑑別方法。軟硬體各要支援什麼？
 
 ---
 
-相關：[CONTEXT.md](../../CONTEXT.md)、[ISASecure CSA 認證](https://www.isasecure.org/en-US/Certification/IEC-62443-CSA-Certification)
 
-
----
 
 ## 本文使用縮寫對照
 
@@ -110,22 +102,22 @@ CCSC（Common Component Security Constraints）是四條對**所有組件類型*
 |---|---|---|
 | **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
 | **CR** | Component Requirement | 組件安全需求，IEC 62443-4-2 定義 |
-| **CSA** | Component Security Assurance | ISASecure 組件安全認證 |
+| CSA | Component Security Assurance | ISASecure 組件安全認證 |
 | **ED** | Embedded Device | 嵌入式裝置組件 (IEC 62443-4-2 組件類型) |
 | **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |
 | **HD** | Host Device | 主機裝置組件 (IEC 62443-4-2 組件類型) |
-| **HMI** | Human-Machine Interface | 人機介面 |
+| HMI | Human-Machine Interface | 人機介面 |
 | **IAC** | Identification and Authentication Control | 識別與鑑別控制 (FR1) |
-| **ISASecure** | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
-| **MCU** | Microcontroller Unit | 微控制器，嵌入式系統的核心晶片 |
+| ISASecure | ISA Security Compliance Institute | ISA 資安合規協會，營運 IEC 62443 認證方案 |
+| MCU | Microcontroller Unit | 微控制器，嵌入式系統的核心晶片 |
 | **ND** | Network Device | 網路裝置組件 (IEC 62443-4-2 組件類型) |
-| **OS** | Operating System | 作業系統 |
-| **PLC** | Programmable Logic Controller | 可程式邏輯控制器 |
-| **RTOS** | Real-Time Operating System | 即時作業系統 |
-| **RTU** | Remote Terminal Unit | 遠端終端單元 |
+| OS | Operating System | 作業系統 |
+| PLC | Programmable Logic Controller | 可程式邏輯控制器 |
+| RTOS | Real-Time Operating System | 即時作業系統 |
+| RTU | Remote Terminal Unit | 遠端終端單元 |
 | **SA** | Software Application | 軟體應用組件 (IEC 62443-4-2 組件類型) |
-| **SCADA** | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
-| **SDLC** | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
-| **TLS** | Transport Layer Security | 傳輸層安全協定，加密通訊 |
+| SCADA | Supervisory Control and Data Acquisition | 監控與資料擷取系統 |
+| SDLC | Secure Development Lifecycle | 安全開發生命週期，IEC 62443-4-1 規範 |
+| TLS | Transport Layer Security | 傳輸層安全協定，加密通訊 |
 
 > 完整術語表見 [CONTEXT.md](../../CONTEXT.md)
