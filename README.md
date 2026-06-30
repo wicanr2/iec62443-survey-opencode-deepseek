@@ -56,8 +56,7 @@ iec62443-kb/
         └── 04-cross-standard-mapping.md     與 ISO 27001 / NIST CSF / CC 對照
 │
 ├── docs/iec62443-4-2-sl2-cheatsheet.md  ← IEC 62443-4-2 SL≥2 速查表：FR 1-7 × SL 2-4 對照 + SL 2 達標最低 10 項檢查表
-│
-└── (SmartMove-*.md)    ← [本地內部文件，不上傳 GitHub] SmartMove vs IEC 62443-4-2 SL≥2 差距分析
+```
 ```
 
 ## 寫作原則
@@ -75,7 +74,7 @@ iec62443-kb/
 | IEC 官方 (webstore.iec.ch) | 標準結構、標題、發布年份 |
 | ISASecure (isasecure.org) | 認證方案結構、組件分類定義、CCSC |
 | Wikipedia (IEC 62443) | SL 定義、標準族全景摘要 |
-| 實務經驗 (SmartMove / AMR / 工控部署) | 合規路面踩坑、gap 分析案例 |
+| 實務經驗 (AMR / 工控部署) | 合規路面踩坑、gap 分析案例 |
 
 > IEC 62443 標準全文為付費內容。本文庫以標準的公開結構、ISASecure 公開文件與業界已知概念為基礎撰寫，不複製標準原文。
 

@@ -104,6 +104,6 @@ IEC 62443 與 CC 的主要差異：
 > **知識庫全文完。**
 >
 > 使用方式：從 [README.md](../../README.md) 依閱讀動線進入各階段的深度篇章。
-> 當需要分析現有系統（如 SmartMove）時，以本庫的 FR 1-7 矩陣 + SL 模型為框架，逐條對照現況找出 gap。
+> 當需要分析現有工控系統時，以本庫的 FR 1-7 矩陣 + SL 模型為框架，逐條對照現況找出 gap。
 
 相關：[CONTEXT.md](../../CONTEXT.md)、[ISO 27001](https://www.iso.org/standard/82875.html)、[NIST CSF](https://www.nist.gov/cyberframework)、[Common Criteria](https://www.iso.org/standard/72891.html)
