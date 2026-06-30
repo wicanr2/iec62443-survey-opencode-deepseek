@@ -68,6 +68,55 @@ P8 (SG) hardening guide 必須文件化通訊需求：
 
 > 整合商拿到這份矩陣才知道 Conduit 上要開什麼規則。
 
+### 3.4 Docker / 容器化部署的 RDF 實踐
+
+容器化不等於隔離——這是 FR5 在部署層最常見的誤解。
+
+Docker 的 `ports:`（`docker run -p`）預設綁 `0.0.0.0`——host 的**所有網路介面**都聽得到，含對外網卡。很多人以為服務跑在容器裡就自動安全了，實際上一行 `ports:` 就把它攤到全網。
+
+**反模式**（常見的 docker-compose）：
+
+```yaml
+services:
+  nginx:    ports: ["80:80"]
+  backend:  ports: ["8081:8081"]   # ← 不該對外
+  mongo:    ports: ["27017:27017"] # ← 不該對外
+  redis:    ports: ["6379:6379"]   # ← 不該對外
+```
+
+四條 `ports:`，四條對外通道。任何一個服務有漏洞（mongo 預設無密碼、redis 無認證），攻擊者直接從外部打進來。
+
+**正確做法**：只讓 reverse proxy 對外，內部服務全部走 Docker 內網。
+
+```yaml
+services:
+  nginx:
+    ports: ["80:80", "443:443"]         # 唯一對外
+  backend:
+    expose: ["8081"]                     # 只給同 network 的容器用
+  mongo:
+    expose: ["27017"]                    # 不綁 host port
+  redis:
+    expose: ["6379"]
+```
+
+三條原則：
+
+1. **只有 reverse proxy（nginx/traefik）掛 `ports:`**——它是唯一被允許對外的窗口。內部服務全部用 `expose:`，只讓同一個 Docker network 內的容器看到。
+2. **內部服務 bind 127.0.0.1 或不 bind host 介面**——`expose:` 不映射到 host port，容器之間靠 Docker DNS（服務名解析）溝通，根本不需要 host port。
+3. **`/var/run/docker.sock` 絕不掛進容器**——這等於把 host 的 root 交出去。掛進容器的 docker.sock 讓容器可以起特權容器、掛 host 根目錄，容器的隔離邊界直接失效。
+
+這三條對應到 IEC 62443 的話：
+
+| Docker 面向 | Zone & Conduit 對應 |
+|---|---|
+| Docker 內網 (bridge network) | 一個 Zone——內部容器互信 |
+| `ports:` 的 host binding | Conduit——從外部 Zone 進入的通道 |
+| nginx reverse proxy | Conduit 上的安全控制點（可以在這裡做 TLS termination、IP whitelist、rate limiting） |
+| 內部服務只 `expose:` | Zone 內通訊——不暴露到 Conduit 外 |
+
+> 實務上，`ports:` 可以加 bind IP 限制：`"127.0.0.1:8081:8081"` 或 `"10.0.2.5:8081:8081"`。這比 `"8081:8081"`（等於 `0.0.0.0:8081`）安全得多——但還是比 `expose:` 多了一層 host 暴露。如果可以只用 `expose:`，就不要用 `ports:`。
+
 ## 4. 硬體支援需求
 
 | 硬體功能 | 說明 |
