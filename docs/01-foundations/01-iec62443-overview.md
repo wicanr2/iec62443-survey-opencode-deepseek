@@ -73,7 +73,9 @@ Stuxnet 讓資安界意識到三件事：
 2. **Air-gap（實體隔離）不是銀彈**——照樣被跳過
 3. **工控設備本身沒有自保能力**——PLC「被改程式」這件事，當時沒有完整性校驗、沒有簽章驗證、沒有異常偵測
 
-正是在這個背景下，ISA-99（2002 啟動）與後來的 IEC 62443 系列加速制定——它不是拍腦袋想的，是被現實逼出來的。
+正是在這個背景下，ISA-99（2002 啟動，後成為 IEC 62443[^1]）系列加速制定——它不是拍腦袋想的，是被現實逼出來的。
+
+[^1]: ISA-99 工作組於 2002 年由 ISA (International Society of Automation) 成立，2007 年起 ISA-99 標準陸續被採納為 IEC 62443 系列。參見 [ISA 官網](https://www.isa.org/standards-and-publications/isa-standards/isa-99)。
 
 ## 3. IEC 62443 的解法架構
 
@@ -145,4 +147,4 @@ IEC 62443 分四群。以下用一張地圖說明每群管什麼、誰該讀：
 
 ---
 
-相關：[CONTEXT.md](../../CONTEXT.md)、[PLAN.md](../../PLAN.md)、[IEC 62443 官方頁](https://webstore.iec.ch/en/publication/7029)
+相關：[CONTEXT.md](../../CONTEXT.md)、[PLAN.md](../../PLAN.md)、[IEC 62443-1-1 (概念模型) 官方頁](https://webstore.iec.ch/en/publication/7029)
