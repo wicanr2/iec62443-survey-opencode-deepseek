@@ -1,1 +1,3 @@
-繁體中文 IEC 62443 知識庫：從根本問題推導軟硬體安全規範。涵蓋 Zone&Conduit、Security Level、FR 1-7、4-1 SDLC、4-2 組件要求、認證實務。含 SL≥2 速查表與 Docker SL2 部署指南。
+繁體中文 IEC 62443 知識庫：從根本問題推導軟硬體安全規範。涵蓋 Zone&Conduit、Security Level、FR 1-7、4-1 SDLC、4-2 組件要求、認證實務、以及延伸的 3-3/3-2/2-1/1-6 全族。含 SL≥2 速查表與 Docker SL2 部署指南。
+
+deepseek 初版整理，後經 Claude 校訂與擴充（遺漏審查 + 完整標準族補完）；仍屬實驗性質，勿全部參考。
