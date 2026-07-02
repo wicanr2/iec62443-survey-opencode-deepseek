@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect width="820" height="480" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">業主的 Security Program (SP) — 8 個 SPE</text>
+  <text x="410" y="52" text-anchor="middle" font-size="11" fill="#888">2024 Ed.2：CSMS → SP，需求模組化成 8 塊，每塊用 ML 1-4 評成熟度</text>
+
+  <!-- Row 1 -->
+  <g>
+    <rect x="30" y="70" width="182" height="150" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="45" y="93" font-size="13" font-weight="bold" fill="#2980b9">SPE 1</text>
+    <text x="45" y="112" font-size="11" font-weight="bold" fill="#333">組織安全措施</text>
+    <text x="45" y="134" font-size="10" fill="#666">ORG 1 組織/政策</text>
+    <text x="45" y="151" font-size="10" fill="#666">・ISMS・角色</text>
+    <text x="45" y="168" font-size="10" fill="#666">・意識訓練</text>
+    <text x="45" y="185" font-size="10" fill="#666">ORG 2 評估審查</text>
+    <text x="45" y="202" font-size="10" fill="#666">ORG 3 實體存取</text>
+  </g>
+  <g>
+    <rect x="222" y="70" width="182" height="150" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="237" y="93" font-size="13" font-weight="bold" fill="#2980b9">SPE 2</text>
+    <text x="237" y="112" font-size="11" font-weight="bold" fill="#333">組態管理</text>
+    <text x="237" y="134" font-size="10" fill="#666">CM 1</text>
+    <text x="237" y="151" font-size="10" fill="#666">・資產盤點基線</text>
+    <text x="237" y="168" font-size="10" fill="#666">・組態設定</text>
+    <text x="237" y="185" font-size="10" fill="#666">・變更控制</text>
+  </g>
+  <g>
+    <rect x="414" y="70" width="182" height="150" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+    <text x="429" y="93" font-size="13" font-weight="bold" fill="#2980b9">SPE 3</text>
+    <text x="429" y="112" font-size="11" font-weight="bold" fill="#333">網路與通訊安全</text>
+    <text x="429" y="134" font-size="10" fill="#666">NET 1 系統分段</text>
+    <text x="429" y="151" font-size="10" fill="#666">NET 2 無線存取</text>
+    <text x="429" y="168" font-size="10" fill="#666">NET 3 遠端存取</text>
+  </g>
+  <g>
+    <rect x="606" y="70" width="184" height="150" rx="8" fill="#fff8e1" stroke="#d35400" stroke-width="1.8"/>
+    <text x="621" y="93" font-size="13" font-weight="bold" fill="#d35400">SPE 4</text>
+    <text x="621" y="112" font-size="11" font-weight="bold" fill="#333">組件安全</text>
+    <text x="621" y="134" font-size="10" fill="#666">COMP 1 強化/媒體</text>
+    <text x="621" y="151" font-size="10" fill="#666">COMP 2 惡意程式</text>
+    <text x="621" y="168" font-size="10" fill="#666">COMP 3 補丁管理</text>
+    <text x="621" y="192" font-size="9.5" fill="#d35400">↔ 對接你的 4-2</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g>
+    <rect x="30" y="235" width="182" height="150" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+    <text x="45" y="258" font-size="13" font-weight="bold" fill="#1e8449">SPE 5</text>
+    <text x="45" y="277" font-size="11" font-weight="bold" fill="#333">資料保護</text>
+    <text x="45" y="299" font-size="10" fill="#666">DATA 1</text>
+    <text x="45" y="316" font-size="10" fill="#666">・分類・機密性</text>
+    <text x="45" y="333" font-size="10" fill="#666">・加密・金鑰管理</text>
+    <text x="45" y="350" font-size="10" fill="#666">・完整性・保留</text>
+  </g>
+  <g>
+    <rect x="222" y="235" width="182" height="150" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+    <text x="237" y="258" font-size="13" font-weight="bold" fill="#1e8449">SPE 6</text>
+    <text x="237" y="277" font-size="11" font-weight="bold" fill="#333">使用者存取控制</text>
+    <text x="237" y="299" font-size="10" fill="#666">USER 1 識別鑑別</text>
+    <text x="237" y="316" font-size="10" fill="#666">USER 2 授權與</text>
+    <text x="237" y="333" font-size="10" fill="#666">　　　 存取控制</text>
+  </g>
+  <g>
+    <rect x="414" y="235" width="182" height="150" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+    <text x="429" y="258" font-size="13" font-weight="bold" fill="#1e8449">SPE 7</text>
+    <text x="429" y="277" font-size="11" font-weight="bold" fill="#333">事件與事故管理</text>
+    <text x="429" y="299" font-size="10" fill="#666">EVENT 1</text>
+    <text x="429" y="316" font-size="10" fill="#666">・事件/事故</text>
+    <text x="429" y="333" font-size="10" fill="#666">　處理與回應</text>
+  </g>
+  <g>
+    <rect x="606" y="235" width="184" height="150" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+    <text x="621" y="258" font-size="13" font-weight="bold" fill="#1e8449">SPE 8</text>
+    <text x="621" y="277" font-size="11" font-weight="bold" fill="#333">完整性與可用性</text>
+    <text x="621" y="299" font-size="10" fill="#666">AVAIL 1 可用性/</text>
+    <text x="621" y="316" font-size="10" fill="#666">　　　 預期功能</text>
+    <text x="621" y="333" font-size="10" fill="#666">AVAIL 2 備份/還原</text>
+  </g>
+
+  <!-- bottom band -->
+  <rect x="30" y="405" width="760" height="55" rx="8" fill="#f4f6f6" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="410" y="427" text-anchor="middle" font-size="11.5" fill="#555">與 ISO 27001 重複的通用管理要求 → 改為引用（Annex A 交叉對照），不重寫</text>
+  <text x="410" y="448" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#2c3e50">評估對象＝業主營運落實成熟度（ML 1-4），與 4-1 同一把尺、量不同的人</text>
+</svg>

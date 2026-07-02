@@ -2,9 +2,38 @@
 
 知識庫的版本演進。所有版本基於以下標準：
 
-- **IEC 62443-4-2:2019**（Edition 1）— Technical security requirements for IACS components
+- **IEC 62443-4-2:2019**（Edition 1；ANSI/ISA 版為 2018）— Technical security requirements for IACS components。修訂案 `prAA:2026` 進行中。
 - **IEC 62443-4-1:2018**（Edition 1）— Secure product development lifecycle requirements
 - **ISASecure CSA 1.0.0**（2019-08-28）— Component Security Assurance certification scheme
+
+> **雙編號提醒**：IEC 版（`IEC 62443-x-x`）與 ANSI/ISA 版（`ANSI/ISA-62443-x-x`）為平行編號，同一 Part 年份/型態可能不同；本庫以 IEC 版編號為主，年份/狀態以 [IEC Webstore](https://webstore.iec.ch) 最新公告為準。
+
+## [0.2.0] — 2026-07-02
+
+觸發：完整標準族「遺漏審查」。核心章原刻意聚焦 4-1/4-2；本版把視野擴到相鄰 Part 並修補既有內容的正確性缺口。
+
+### 新增
+
+- **Phase 6 超出核心**（`docs/06-beyond-4x/`，4 篇）
+  - 01 系統安全要求 SR（IEC 62443-3-3:2013）— 完整 51 條 SR + RE/SL 階梯 + SSA
+  - 02 風險評估 ZCR（IEC 62443-3-2:2020）— ZCR 七步 + ZCR5 十三子步 + SL-T 推導
+  - 03 業主安全計畫（IEC 62443-2-1:2024）— SP/8 SPE + 成熟度模型 + 接 2-2
+  - 04 IIoT 應用（IEC PAS 62443-1-6:2025）— PAS 定位 + 鬆動的假設 + ICSA
+- **6 張新 SVG**（img/22–27）：ZCR 流程、SL-T 風險矩陣、SR/CR 兩層、RE 階梯、IACS vs IIoT、8 SPE 地圖
+- `docs/README.md` 新增**範圍說明**（核心 vs 延伸，哪些 Part 刻意不涵蓋）
+
+### 修正（遺漏審查第一級 — 正確性）
+
+- **標準族全景表**補齊 1-2/1-4/1-6/2-2/6-1/6-2，加型態（IS/TR/TS/PAS）與 IEC/ISA 雙編號提醒（`01-overview` + `CONTEXT` + `img/01` 三處）
+- 修正 **SL 定義錯置**：`-1-3` → `-1-1`
+- ISASecure 篇補 **6-1:2024 / 6-2:2025 評估方法學** 與 **ACSSA（2024）** 認證方案
+- 4-2 版本標註補 **IEC(2019)/ISA(2018) 雙編號 + prAA:2026** 修訂中
+- **SPR 縮寫消歧義**：本庫自訂 SPR（P2）vs 官方 2-2 的 Security Protection Rating
+
+### 已知限制（本版新增）
+
+- 06 章多數斷言來自官方目次 / ISA 白皮書 / MDPI 論文交叉驗證；3-3 完整「51 SR × SL × RE」矩陣、2-1 各 SPE 逐條、1-6 條文級細節在付費正文內，未逐字核對，文中已標「待查證」。
+- 版本狀態（2-2、6-x、1-6）以查證日 2026-07-02 的 IEC Webstore 公開資訊為準，可能變動。
 
 ## [0.1.0] — 2026-06-30
 

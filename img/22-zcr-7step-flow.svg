@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 660" width="820" height="660" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/></marker>
+    <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#7f8c8d"/></marker>
+  </defs>
+  <rect width="820" height="660" fill="#ffffff"/>
+  <text x="410" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">ZCR 七步驟：從整廠架構到已核准的 CRS</text>
+
+  <!-- ZCR1 -->
+  <rect x="230" y="55" width="360" height="48" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="410" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">ZCR 1　界定 SUC 邊界與存取點</text>
+  <text x="410" y="94" text-anchor="middle" font-size="10.5" fill="#666">畫出評估範圍：現場感測器 → IT 交界 DMZ</text>
+
+  <line x1="410" y1="103" x2="410" y2="118" stroke="#e67e22" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- ZCR2 -->
+  <rect x="230" y="120" width="360" height="48" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="410" y="141" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">ZCR 2　初步風險評估</text>
+  <text x="410" y="159" text-anchor="middle" font-size="10.5" fill="#666">篩選式快評（只看後果），輔助劃分 zone</text>
+
+  <line x1="410" y1="168" x2="410" y2="183" stroke="#e67e22" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- ZCR3 -->
+  <rect x="230" y="185" width="360" height="48" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="410" y="206" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">ZCR 3　劃分 zones &amp; conduits</text>
+  <text x="410" y="224" text-anchor="middle" font-size="10.5" fill="#666">五條分離鐵律：business/safety/臨時/無線/對外</text>
+
+  <line x1="410" y1="233" x2="410" y2="250" stroke="#e67e22" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- ZCR4 decision diamond -->
+  <polygon points="410,252 530,300 410,348 290,300" fill="#fdebd0" stroke="#e67e22" stroke-width="1.8"/>
+  <text x="410" y="294" text-anchor="middle" font-size="12" font-weight="bold" fill="#d35400">ZCR 4　初步風險</text>
+  <text x="410" y="311" text-anchor="middle" font-size="12" font-weight="bold" fill="#d35400">＞ 可容忍風險？</text>
+
+  <!-- Yes down to ZCR5 -->
+  <line x1="410" y1="348" x2="410" y2="373" stroke="#e67e22" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="424" y="366" font-size="11" font-weight="bold" fill="#c0392b">是</text>
+
+  <!-- No branch to right, down to ZCR6 -->
+  <path d="M530,300 L700,300 L700,470 L592,470" fill="none" stroke="#7f8c8d" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+  <text x="620" y="293" font-size="11" font-weight="bold" fill="#7f8c8d">否 → 直接記錄</text>
+
+  <!-- ZCR5 big box -->
+  <rect x="200" y="375" width="420" height="72" rx="8" fill="#fff8e1" stroke="#d35400" stroke-width="2"/>
+  <text x="410" y="397" text-anchor="middle" font-size="13" font-weight="bold" fill="#d35400">ZCR 5　詳細風險評估（每 zone/conduit 逐一）</text>
+  <text x="410" y="416" text-anchor="middle" font-size="10.5" fill="#666">13 子步：威脅→脆弱性→後果→likelihood→未緩解風險</text>
+  <text x="410" y="433" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">★ 5.6 判定 SL-T　→　對策 → 殘餘風險</text>
+
+  <!-- ZCR5 self-loop -->
+  <path d="M200,411 L150,411 L150,470 L200,440" fill="none" stroke="#c0392b" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="60" y="405" font-size="10" fill="#c0392b">殘餘 &gt; 可容忍</text>
+  <text x="70" y="419" font-size="10" fill="#c0392b">→ 補對策重評</text>
+
+  <line x1="410" y1="447" x2="410" y2="463" stroke="#e67e22" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- ZCR6 -->
+  <rect x="230" y="465" width="360" height="48" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="410" y="486" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">ZCR 6　記錄需求、假設與限制 → CRS</text>
+  <text x="410" y="504" text-anchor="middle" font-size="10.5" fill="#666">彙整成 Cyber security Requirements Specification</text>
+
+  <line x1="410" y1="513" x2="410" y2="530" stroke="#e67e22" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- ZCR7 -->
+  <rect x="230" y="532" width="360" height="48" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="410" y="553" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">ZCR 7　資產擁有者核准</text>
+  <text x="410" y="571" text-anchor="middle" font-size="10.5" fill="#666">asset owner 審查簽核 → 已核准的 CRS</text>
+
+  <!-- downstream note -->
+  <rect x="150" y="600" width="520" height="42" rx="8" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.3"/>
+  <text x="410" y="618" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#8e44ad">產出 SL-T → 交給 3-3 (系統 SR) 與 4-2 (組件 CR) 去達成</text>
+  <text x="410" y="634" text-anchor="middle" font-size="10.5" fill="#666">SL-C ≥ SL-T 達標；SL-C &lt; SL-T 就升級組件或做補償</text>
+</svg>

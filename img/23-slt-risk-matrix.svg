@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#c0392b"/></marker>
+  </defs>
+  <rect width="760" height="470" fill="#ffffff"/>
+  <text x="380" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">SL-T 怎麼推出來：把未緩解風險拉回可容忍</text>
+
+  <!-- Y axis label -->
+  <text x="40" y="215" font-size="12" font-weight="bold" fill="#555" transform="rotate(-90 40 215)">後果嚴重度 →</text>
+  <!-- X axis label -->
+  <text x="380" y="405" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">攻擊成功 likelihood →</text>
+
+  <!-- matrix 5 cols x 4 rows; origin -->
+  <!-- row colors: define per cell via risk = col+row. cell 96x66, x0=110,y0=70 -->
+  <!-- Row4 (top, 災難) y=70 -->
+  <rect x="110" y="70" width="96" height="66" fill="#fdebd0" stroke="#fff" stroke-width="2"/>
+  <rect x="206" y="70" width="96" height="66" fill="#f5cba7" stroke="#fff" stroke-width="2"/>
+  <rect x="302" y="70" width="96" height="66" fill="#f5b7b1" stroke="#fff" stroke-width="2"/>
+  <rect x="398" y="70" width="96" height="66" fill="#f1948a" stroke="#fff" stroke-width="2"/>
+  <rect x="494" y="70" width="96" height="66" fill="#e6564a" stroke="#fff" stroke-width="2"/>
+  <!-- Row3 y=136 -->
+  <rect x="110" y="136" width="96" height="66" fill="#d5f5e3" stroke="#fff" stroke-width="2"/>
+  <rect x="206" y="136" width="96" height="66" fill="#fdebd0" stroke="#fff" stroke-width="2"/>
+  <rect x="302" y="136" width="96" height="66" fill="#f5cba7" stroke="#fff" stroke-width="2"/>
+  <rect x="398" y="136" width="96" height="66" fill="#f5b7b1" stroke="#fff" stroke-width="2"/>
+  <rect x="494" y="136" width="96" height="66" fill="#f1948a" stroke="#fff" stroke-width="2"/>
+  <!-- Row2 y=202 -->
+  <rect x="110" y="202" width="96" height="66" fill="#d5f5e3" stroke="#fff" stroke-width="2"/>
+  <rect x="206" y="202" width="96" height="66" fill="#d5f5e3" stroke="#fff" stroke-width="2"/>
+  <rect x="302" y="202" width="96" height="66" fill="#fdebd0" stroke="#fff" stroke-width="2"/>
+  <rect x="398" y="202" width="96" height="66" fill="#f5cba7" stroke="#fff" stroke-width="2"/>
+  <rect x="494" y="202" width="96" height="66" fill="#f5b7b1" stroke="#fff" stroke-width="2"/>
+  <!-- Row1 (bottom, 輕微) y=268 -->
+  <rect x="110" y="268" width="96" height="66" fill="#abebc6" stroke="#fff" stroke-width="2"/>
+  <rect x="206" y="268" width="96" height="66" fill="#d5f5e3" stroke="#fff" stroke-width="2"/>
+  <rect x="302" y="268" width="96" height="66" fill="#d5f5e3" stroke="#fff" stroke-width="2"/>
+  <rect x="398" y="268" width="96" height="66" fill="#fdebd0" stroke="#fff" stroke-width="2"/>
+  <rect x="494" y="268" width="96" height="66" fill="#f5cba7" stroke="#fff" stroke-width="2"/>
+
+  <!-- tolerable region label -->
+  <text x="158" y="308" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">可容忍</text>
+  <text x="158" y="322" text-anchor="middle" font-size="10" fill="#1e8449">tolerable</text>
+
+  <!-- unmitigated risk marker: top-right (high consequence, high likelihood) -->
+  <circle cx="542" cy="103" r="15" fill="#ffffff" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="542" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">✦</text>
+  <text x="542" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">未緩解風險</text>
+
+  <!-- target tolerable cell (same consequence row top, but low likelihood) -->
+  <circle cx="158" cy="103" r="13" fill="#ffffff" stroke="#1e8449" stroke-width="2.5" stroke-dasharray="3,2"/>
+  <text x="158" y="107" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">✓</text>
+
+  <!-- big reduction arrow across top row -->
+  <line x1="524" y1="103" x2="178" y2="103" stroke="#c0392b" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- reduction bracket / SL-T label -->
+  <rect x="230" y="150" width="250" height="40" rx="8" fill="#ffffff" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="355" y="167" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">需要的「風險降幅」</text>
+  <text x="355" y="183" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">＝ 對應的 SL-T</text>
+
+  <!-- axis tick labels -->
+  <text x="158" y="352" text-anchor="middle" font-size="10" fill="#888">低</text>
+  <text x="542" y="352" text-anchor="middle" font-size="10" fill="#888">高</text>
+  <text x="95" y="107" text-anchor="end" font-size="10" fill="#888">災難</text>
+  <text x="95" y="305" text-anchor="end" font-size="10" fill="#888">輕微</text>
+
+  <!-- note -->
+  <text x="380" y="440" text-anchor="middle" font-size="11" fill="#666">後果固定（同一列）；靠安全等級把 likelihood 往左推，降幅愈大 → SL-T 愈高</text>
+  <text x="380" y="457" text-anchor="middle" font-size="9.5" fill="#aaa">※「每升一級約降一個數量級」為 ISA 白皮書範例假設，非標準硬性規定</text>
+</svg>

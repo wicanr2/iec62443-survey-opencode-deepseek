@@ -19,7 +19,10 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 | SDLA | 開發組織的流程 | IEC 62443-4-1 | 證明「你會用安全的方式開發產品」 |
 | CSA | 單一組件（產品） | IEC 62443-4-2 + 4-1 | 證明「這個產品安全 + 開發流程安全」 |
 | SSA | 系統（多組件整合） | IEC 62443-3-3 + 4-1 | 證明「這個系統安全 + 開發流程安全」 |
-| ICSA | IIoT 組件 | IEC 62443-4-2 + 4-1（IIoT 擴展） | CSA 的 IIoT 特化版 |
+| ICSA | IIoT 組件（約 2022 起） | IEC 62443-4-2 + 4-1（IIoT 擴展） | CSA 的 IIoT 特化版 |
+| ACSSA | 業主現場「已部署的控制系統 + 政策程序」（2024 新增） | IEC 62443-2-1 / -2-4 / -3-3 面向 | 從供應商產品認證延伸到「營運中的系統」評估 |
+
+> 前四個方案（SDLA/CSA/SSA/ICSA）是**產品供應商/整合商**視角；**ACSSA（Automation and Control System Security Assurance，2024 新增）**把評估對象換成**資產擁有者現場已部署的系統與其政策程序**——這是 ISASecure 從「認產品」跨到「認營運系統」的一步。若你是產品供應商，主戰場仍是 SDLA + CSA。
 
 ### 2.1 方案之間的關係
 
@@ -60,6 +63,19 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 | UL | 美國/全球 |
 | CSSC (Control System Security Center) | 日本 |
 
+### 3.4 認證機構「怎麼評」：評估方法學 6-1 / 6-2
+
+前面談的是 ISASecure 的**商業方案**（SDLA/CSA/…）。但「認證機構拿到你的產品後，具體用什麼方法、什麼判準去查它符不符合 4-1/4-2」——這件事本身近年被獨立標準化為 **62443-6-x 評估方法學**：
+
+| 標準 | 評估對象 | 型態·版本 | 白話 |
+|---|---|---|---|
+| IEC TS 62443-6-1 | -2-4（服務商安全計畫） | TS, 2024 | 怎麼查一家服務商/整合商的流程能力達標 |
+| IEC TS 62443-6-2 | -4-2（組件技術要求） | TS, 2025 | 怎麼查一個組件的 CR 逐條達標——**與 CSA 直接相關** |
+
+為什麼要把「評估方法」也標準化？因為若判準只存在各認證機構腦中，不同 CB 對同一產品可能給出不同結論，認證的**可比較性**就崩了。6-2 把「4-2 每條 CR 要看什麼證據、怎麼判過或不過」寫成公開方法，讓 CSA 評估在不同 CB 之間可對齊。
+
+> 對產品供應商的實務意義：準備 CSA 送審時，**6-2 就是對方的評分表**。愈早對照 6-2 的評估點自檢，愈少在正式評估被退件。（6-x 為 TS，發布狀態與內容以 [IEC Webstore](https://webstore.iec.ch) 最新版為準。）
+
 ## 4. 從哪開始？
 
 ### 4.1 建議路徑
@@ -99,6 +115,7 @@ ISASecure 是 ISA (International Society of Automation) 營運的第三方認證
 
 | 縮寫 | 全稱 | 說明 |
 |---|---|---|
+| ACSSA | Automation and Control System Security Assurance | ISASecure 2024 新增，認證業主現場已部署系統 |
 | **CCSC** | Common Component Security Constraint | 通用組件安全約束，4-2 定義 4 條鐵律 |
 | CSA | Component Security Assurance | ISASecure 組件安全認證 |
 | **FR** | Foundational Requirement | 基礎安全需求，IEC 62443 的核心架構，共 7 條 (FR1-7) |

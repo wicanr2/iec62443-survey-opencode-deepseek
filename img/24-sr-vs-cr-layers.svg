@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" font-family="'Noto Sans CJK TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 Z" fill="#8e44ad"/></marker>
+  </defs>
+  <rect width="820" height="440" fill="#ffffff"/>
+  <text x="410" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">同一套 FR，兩層責任：SR（系統） vs CR（組件）</text>
+
+  <!-- 3-3 SR layer (top) -->
+  <rect x="40" y="55" width="740" height="92" rx="10" fill="#e8f8f5" stroke="#27ae60" stroke-width="2"/>
+  <text x="60" y="80" font-size="14" font-weight="bold" fill="#1e8449">IEC 62443-3-3　SR　系統層責任　→ 系統整合商 · SSA 認證</text>
+  <rect x="60" y="92" width="330" height="44" rx="6" fill="#ffffff" stroke="#27ae60" stroke-width="1"/>
+  <text x="75" y="110" font-size="11.5" fill="#555">SR 5.1 網路分段</text>
+  <text x="75" y="128" font-size="10" fill="#888">多組件擺進 zone/conduit 才成立</text>
+  <rect x="405" y="92" width="355" height="44" rx="6" fill="#ffffff" stroke="#27ae60" stroke-width="1"/>
+  <text x="420" y="110" font-size="11.5" fill="#555">SR 7.5 緊急電源　·　SR 7.8 組件清單</text>
+  <text x="420" y="128" font-size="10" fill="#888">單一組件無法獨力滿足的系統級要求</text>
+
+  <!-- shared FR skeleton (middle) -->
+  <rect x="40" y="163" width="740" height="60" rx="10" fill="#fdf2e9" stroke="#e67e22" stroke-width="2"/>
+  <text x="60" y="185" font-size="13" font-weight="bold" fill="#d35400">共用的 7 個 FR 骨架</text>
+  <text x="60" y="210" font-size="11" fill="#666">FR1 IAC　FR2 UC　FR3 SI　FR4 DC　FR5 RDF　FR6 TRE　FR7 RA　—　SR 與 CR 都掛在這同一套骨架上</text>
+
+  <!-- 4-2 CR layer (bottom) -->
+  <rect x="40" y="239" width="740" height="92" rx="10" fill="#fff8e1" stroke="#d35400" stroke-width="2"/>
+  <text x="60" y="264" font-size="14" font-weight="bold" fill="#d35400">IEC 62443-4-2　CR　組件層責任　→ 產品供應商（你） · CSA 認證</text>
+  <rect x="60" y="276" width="330" height="44" rx="6" fill="#ffffff" stroke="#e67e22" stroke-width="1"/>
+  <text x="75" y="294" font-size="11.5" fill="#555">CR 1.2 裝置識別與鑑別</text>
+  <text x="75" y="312" font-size="10" fill="#888">組件自己內建憑證能力</text>
+  <rect x="405" y="276" width="355" height="44" rx="6" fill="#ffffff" stroke="#e67e22" stroke-width="1"/>
+  <text x="420" y="294" font-size="11.5" fill="#555">CR 3.5 輸入驗證　·　CR 4.3 密碼學使用</text>
+  <text x="420" y="312" font-size="10" fill="#888">產品本身要做到的技術能力</text>
+
+  <!-- CCSC2 compensation connector (右側空白區，避開標題) -->
+  <line x1="692" y1="239" x2="692" y2="147" stroke="#8e44ad" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#a2)" marker-start="url(#a2)"/>
+  <rect x="450" y="163" width="250" height="26" rx="13" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.3"/>
+  <text x="575" y="181" text-anchor="middle" font-size="11" font-weight="bold" fill="#8e44ad">CCSC 2：組件做不到 → 系統層補償 ↑</text>
+
+  <!-- bottom note -->
+  <text x="410" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">4-2 是把 3-3 的 SR「延伸下放」到組件層 → 兩者是同骨架的兩個投影</text>
+  <text x="410" y="384" text-anchor="middle" font-size="11" fill="#666">讀熟 4-2 CR 再看 3-3 SR 會有既視感，因為本來就是同一套需求的系統/組件兩面</text>
+  <text x="410" y="414" text-anchor="middle" font-size="10.5" fill="#999">SL-T（由 3-2 定）↓ 系統用 SR 量 SL-C　·　組件用 CR 量 SL-C　·　SL-C ≥ SL-T 才達標</text>
+</svg>

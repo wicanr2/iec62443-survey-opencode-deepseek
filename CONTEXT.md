@@ -7,10 +7,13 @@
 | 縮寫 | 全稱 | 中文 | 說明 |
 |---|---|---|---|
 | IEC 62443 | Industrial communication networks — Network and system security | 工業通訊網路安全標準系列 | ISA/IEC 共同制定，原名 ISA-99 |
-| -1-x | General（概念與術語） | 通用基礎 | 包含概念模型 (-1-1)、術語表 (-1-2)、SL 定義 (-1-3) |
-| -2-x | Security management（管理程序） | 安全管理 | Asset owner (-2-1)、服務商 (-2-4)、補丁管理 (-2-3) |
-| -3-x | System security（系統安全） | 系統層安全 | 包含技術 (-3-1)、風險評估 (-3-2)、系統需求 (-3-3) |
-| -4-x | Component security（組件安全） | 組件層安全 | 開發生命週期 (-4-1)、組件技術要求 (-4-2) |
+| -1-x | General（概念與術語） | 通用基礎 | 概念模型與 **SL 定義** (-1-1)、術語表 (-1-2, 制定中)、一致性度量 (-1-3, 制定中)、生命週期與案例 (-1-4, 制定中)、profiles 方案 (-1-5, 2023)、IIoT 應用 (-1-6, PAS 2025) |
+| -2-x | Policies & Procedures（管理程序） | 安全管理 | 業主安全計畫 (-2-1, 2024 Ed.2)、安全防護評等 (-2-2, 制定中)、補丁管理 (-2-3, 2015)、服務商要求 (-2-4, 2023 Ed.2)、業主實作指引 (-2-5, 制定中) |
+| -3-x | System security（系統安全） | 系統層安全 | 安全技術 (-3-1)、風險評估 ZCR (-3-2, 2020)、系統需求 SR+SL (-3-3, 2013) |
+| -4-x | Component security（組件安全） | 組件層安全 | 開發生命週期 (-4-1, 2018)、組件技術要求 (-4-2, 2019) |
+| -6-x | Evaluation（評估方法學） | 認證評估 | 評估 -2-4 方法 (-6-1, TS 2024)、評估 -4-2 方法 (-6-2, TS 2025) |
+
+> **SL 定義在 -1-1**（非 -1-3）。**雙編號**：`IEC 62443-x-x`（IEC 版）與 `ANSI/ISA-62443-x-x`（ISA 版）平行編號，同一 Part 年份/型態可能不同，引用需標明。
 
 ## 核心概念
 
@@ -85,6 +88,18 @@
 | CSA | Component Security Assurance | IEC 62443-4-2 + 4-1 |
 | SSA | System Security Assurance | IEC 62443-3-3 + 4-1 |
 | ICSA | IIoT Component Security Assurance | IEC 62443-4-2 + 4-1 (IIoT 擴展) |
+| ACSSA | Automation and Control System Security Assurance | IEC 62443-2-1 / -2-4 / -3-3 面向（2024 新增，認業主現場系統） |
+
+> **認證方法學**：認證機構「怎麼評」由 IEC TS 62443-6-1 (2024, 評估 -2-4)、-6-2 (2025, 評估 -4-2) 定義；6-2 等於 CSA 的評分方法。
+
+## 縮寫消歧義（易混淆）
+
+| 縮寫 | 本庫用法 | 官方另一意義 | 如何分辨 |
+|---|---|---|---|
+| **SPR** | 本庫自訂代號：4-1 的 P2「Security Practice: Requirements」（安全需求規格） | **IEC 62443-2-2 的 Security Protection Rating**（安全防護評等，把 SL 技術等級與 ML 成熟度合成單一評分） | 談 4-1 開發 Practice → 本庫 P2；談 2-2 業主現場評分 → 官方 SPR。**兩者無關**，勿混用 |
+| **SR** | 3-3 的 System Requirement（系統安全需求） | 亦常被寫成 P2 的縮寫 | 本庫 P2 一律用 SPR，SR 專指 3-3 系統需求 |
+
+> 2-2 在 ISA 版（TR, 2025）稱 **SPS（Security Protection Scheme）**、IEC 版（制定中）稱 **SPR（Security Protection Rating）**，兩套術語尚未統一。
 
 ## 全域慣例
 
